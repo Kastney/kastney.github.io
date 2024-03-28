@@ -3,4 +3,5 @@
 title: "Jekyll Actions Demo"
 
 plugins:
+  - jekyll-timeago
   - jekyll-feed

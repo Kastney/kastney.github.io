@@ -7,3 +7,5 @@ Bem vindo a minha página
 
 - Data original: {{ date }}
 - Tempo decorrido de: {{ date | timeago }}
+
+[{{ date | timeago }}] 
