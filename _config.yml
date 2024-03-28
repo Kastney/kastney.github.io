@@ -8,3 +8,5 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-spaceship
+  - jekyll-paginate-v2
+  - jekyll-scholar

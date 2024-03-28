@@ -8,4 +8,6 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag", "~> 2.8.0"
   gem "jekyll-sitemap", "~> 1.4.0"
   gem "jekyll-spaceship", "~> 0.10.2"
+  gem "jekyll-paginate-v2", "~> 3.0.0"
+  gem "jekyll-scholar", "~> 7.1.3"
 end
