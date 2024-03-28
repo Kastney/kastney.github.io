@@ -1,9 +1,9 @@
 ---
 ---
 
-Welcome to My Home Page
+Bem vindo a minha página
 
-{% assign date = '2020-04-13T10:20:00Z' %}
+{% assign date = '2024-03-15T10:20:00Z' %}
 
-- Original date - {{ date }}
-- With timeago filter - {{ date | timeago }}
+- Data original: {{ date }}
+- Tempo decorrido de: {{ date | timeago }}
