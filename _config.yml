@@ -6,3 +6,5 @@ plugins:
   - jekyll-timeago
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-spaceship
