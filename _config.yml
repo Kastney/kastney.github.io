@@ -1,6 +1,31 @@
 # bundle exec jekyll serve --livereload
 
-title: "Jekyll Actions Demo"
+title: "@kastney"
+
+# Collections settings
+collections_dir: _collections
+collections:
+  blog:
+    output: true
+    permalink: /blog/:name/
+  games:
+    output: true
+    permalink: /games/:name/
+
+# Paginate settings
+pagination:
+  enabled: true
+  debug: false
+  permalink: '/:num/'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+# Bibliografy settings
+scholar:
+  style: assets/bibliography/apa.csl
+  sort_by: ascending
+  order: des
 
 plugins:
   - jekyll-timeago

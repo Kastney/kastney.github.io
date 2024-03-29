@@ -1,0 +1,86 @@
+.page-segments {
+    .page-segments-list {
+        margin-left: 0;
+        list-style: none;
+    }
+  
+    .segment-name {
+        font-weight: $base-font-weight * 1.5;
+        margin-bottom: 8px;
+        position: relative;
+  
+        @include relative-font-size(1.6);
+  
+        &:not(:first-child) {
+            margin-top: 28px;
+        }
+  
+        &:hover:before {
+            content: '#';
+            left: -1em;
+            position: absolute;
+        }
+    }
+  
+    .post-meta {
+        font-size: $small-font-size;
+        color: $grey-color;
+    }
+  
+    li a {
+        &.post-link {
+            margin-left: 5px;
+        }
+  
+        color: #303030;
+  
+        &:hover {
+            color: #000;
+        }
+  
+        &:after {
+            content: 'NOVO';
+            position: absolute;
+            margin-left: 8px;
+            margin-top: 3px;
+            padding: 0px 3px;
+            background-color: $brand-color;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 600;
+            border-radius: 2px;
+        }
+  
+        &:visited:after {
+            background-color: plum;
+        }
+    }
+}
+  
+.left-vsplit:before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    margin: 0 10px;
+    background-color: #e3e3e3e3;
+    vertical-align: baseline;
+}
+
+html[data-theme="dark"]  {
+    .page-segments {
+        li {
+            a {
+                color: #ddd;
+            }
+  
+            a:visited:after {
+                background-color: $dark-background-color;
+            }
+  
+            a:after {
+                color: $dark-background-color;
+            }
+        }
+    }
+}

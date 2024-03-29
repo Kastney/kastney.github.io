@@ -1,0 +1,55 @@
+/* Bibliography */
+ol.bibliography li {
+  list-style-type: none;
+  margin: 30px 0;
+  text-indent:-2em;
+}
+ol.bibliography li a {
+  text-indent:0px;
+}
+ol.bibliography li:before {
+  width:3em;
+  position:absolute;
+  text-indent:-2em;
+  
+  position: absolute;
+  text-align: right;
+  width: 4em;
+  margin-left: -4.4em;
+}
+  
+ol.bibliography a {
+  position: relative;
+  padding-right: 8px;
+  font-size: 20px;
+  color: $grey-color;
+}
+ol.bibliography a:hover {
+  text-decoration: none;
+}
+ol.bibliography .ai-doi:hover {
+  color: #F1BC25;
+}
+ol.bibliography .ai-google-scholar-square:hover {
+  color: #4285F4;
+}
+ol.bibliography .ai-ieee:hover {
+  color: #0072AE;
+}
+ol.bibliography .ai-acmdl:hover {
+  color: #537032;
+}
+ol.bibliography .ai-elsevier:hover {
+  color: #FF6C00;
+}
+.ai-open-access {
+  color: #FF6C00;
+}
+  
+ol.bibliography .fa-external-link-square:hover {
+  color: $brand-color;
+}
+
+ol.bibliography .fa-cloud-download:hover {
+  color: $brand-color;
+}

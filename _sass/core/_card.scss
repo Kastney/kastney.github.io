@@ -1,0 +1,103 @@
+.card {
+    box-shadow: 0 0px 3px 0 rgba(0,0,0,0.25);
+    width: 100%;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 255);
+    margin: 15px 0px;
+}
+
+.card_content hr {
+    border: 0.1px solid #0002;
+}
+
+.card_content {
+    padding: 10px;
+
+    .card-title {
+        color: $text-color;
+        text-decoration: none;
+    }
+
+    .profile-picture {
+        height: 18px;
+        width: 18px;
+        border-radius: 25%;
+        margin-top: -2px;
+    }
+
+    .card-meta {
+        font-size: $small-font-size;
+        color: $grey-color;
+        margin-bottom: 5px;
+    }
+    .card-meta span a {
+        color: $grey-color;
+        text-decoration: none;
+    }
+    .card-meta span a:hover {
+        color: $brand-color;
+    }
+
+    .card-authors {
+        margin-top: 5px;
+        padding-bottom: 2px;
+    }
+    .card-author {
+        color: $grey-color;
+        text-decoration: none;
+        padding-right: 10px;
+    }
+    .card-author:hover {
+        color: $brand-color;
+    }
+
+    .post-excerpt {
+        text-decoration: none;
+    }
+    .post-excerpt p {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .card-tag {
+        color: gray;
+        text-decoration: none;
+        font-weight: bold;
+        padding-right: 15px;
+    }
+    .card-tag:hover {
+        color: $brand-color;
+    }
+
+    .license {
+        color: $text-color;
+        text-decoration: none;
+    }
+    .license:hover {
+        color: $brand-color;
+    }
+}
+
+html[data-theme="dark"]  {
+    .card {
+        box-shadow: 0 0px 3px 0 rgba(255,255,255,0.5);
+        background: rgba(50, 50, 50, 255);
+    }
+
+    .card_content {
+        .card-title {
+            color: $dark-text-color;
+        }
+
+        .license {
+            color: $dark-text-color;
+        }
+        .license:hover {
+            color: $brand-color;
+        }
+    }
+
+    .card_content hr {
+        border: 0.1px solid #fff2;
+    }
+}
