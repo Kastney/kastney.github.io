@@ -1,0 +1,35 @@
+{%- if page.paginator -%}
+  {%- assign paginator = page.paginator -%}
+{%- elsif paginator == nil -%}
+  {%- assign paginator = site -%}
+{%- endif -%}
+
+{%- if paginator.posts.size > 0 -%}
+  <div class="pagination">
+
+    {%- for post in paginator.posts -%}
+      {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
+      <a href="{{ post.url | relative_url }}">
+        <div class="card">
+          <div class="card_content">
+            <p>
+              <span><i class="fa fa-tag"></i> {{ post.categories }}&nbsp;</span>
+              <span style="float: right; padding-top: 5px;"><i class="fa fa-calendar"></i> {{ post.date | date: date_format }}&nbsp;</span>
+            </p>
+          </div>
+        </div>
+      </a>
+    {%- endfor -%}
+
+    <div class="card">
+      <div align="center" class="card_content">
+        Propaganda<br><br><br><br><br>
+      </div>
+    </div>
+
+    {%- if paginator.total_pages > 1 -%}
+    {%- include views/paginator.html -%}
+    {%- endif -%}
+
+  </div>
+{%- endif -%}

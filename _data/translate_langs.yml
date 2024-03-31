@@ -1,0 +1,10 @@
+# Translate languages
+# langs refer to https://cloud.google.com/translate/docs/languages
+
+- lang: pt
+  img: https://cdn.countryflags.com/thumbs/brazil/flag-400.png
+  text: Português
+
+- lang: en
+  img: https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png
+  text: English

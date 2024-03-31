@@ -1,0 +1,372 @@
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    {%- assign name = 'lang' -%}
+    {%- include functions.html func='get_value' default='en' -%}
+    {%- assign lang = return -%}
+
+    <div class="post-header">
+      <!-- Autores -->
+      {%- if page.authors != null || page.collaborators != null || page.advisors != null -%}
+      <div class="post-authors">
+        {%- if page.authors != null -%}
+          {%- for author in page.authors -%}
+            {%- for member in site.members -%}
+              {% assign _member = member.path | replace: "_members/", "" | replace: ".md", "" %}
+              {% if _member == author %}
+                <a class="post-author" href="{{ '/member/' | relative_url }}{{author}}/">
+                  <img class="profile-picture" src="{{ member.profile_image }}"> {{ member.title }}
+                </a>
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endfor -%}
+        {%- endif -%}
+  
+        {%- if page.collaborators != null -%}
+          {%- for author in page.collaborators -%}
+            {%- for member in site.members -%}
+              {% assign _member = member.path | replace: "_members/", "" | replace: ".md", "" %}
+              {% if _member == author %}
+                <a class="post-author" href="{{ '/member/' | relative_url }}{{author}}/">
+                  <img class="profile-picture" src="{{ member.profile_image }}"> {{ member.title }}
+                </a>
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endfor -%}
+        {%- endif -%}
+  
+        {%- if page.advisors != null -%}
+          {%- for author in page.advisors -%}
+            {%- for member in site.members -%}
+              {% assign _member = member.path | replace: "_members/", "" | replace: ".md", "" %}
+              {% if _member == author %}
+                <a class="post-author" href="{{ '/member/' | relative_url }}{{author}}/">
+                  <img class="profile-picture" src="{{ member.profile_image }}"> {{ member.title }}
+                </a>
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endfor -%}
+        {%- endif -%}
+      </div>
+      {%- endif -%}
+
+      <!-- Datas e horas -->
+      <p class="post-meta">
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
+          <i class="fa fa-calendar"></i> {{ page.date | date: date_format }}&nbsp;&nbsp;&nbsp;
+        </time>
+    
+        {% assign article = page.abstract | append: page.content %}
+        {% assign lang = page.lang %}
+        {%- include functions.html func='get_reading_time' -%}
+        {% assign reading_time = return %}
+        <span class="post-reading-time"><i class="fa fa-clock-o"></i> {{ reading_time }}</span>
+      </p>
+    </div>
+
+    <div class="post-content e-content paper-lang" itemprop="articleBody" lang="{{ lang }}">
+      <!-- Resumo -->
+      {%- if page.abstract != null -%}      
+        {% if lang == 'pt' %}
+          <h2 id='abstract'>Resumo</h2>
+        {% else %}
+          <h2 id='abstract'>Abstract</h2>
+        {% endif %}
+        <p>{{ page.abstract }}</p>
+      {%- endif -%}
+
+       <!-- Palavras chaves -->
+      {%- if page.tags.size > 0 -%}
+        <div class="post-tags">
+          {%- for tag in page.tags -%}
+            <a class="post-tag" href="{{ '/library/keywords/' | relative_url }}#h-{{tag}}">#{{tag}}</a>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      <!-- Conteúdo -->
+      <div class="paper-content">
+        {{ content }}
+      </div>
+
+      <!-- Referências -->
+      {%- capture citecount -%}
+      {%- bibliography_count --cited -%}
+      {%- endcapture -%}
+
+      {% if {{citecount}} != "0"  %}        
+        {% if lang == 'pt' %}
+          <h2 id='references'>Referências</h2>
+        {% else %}
+          <h2 id='references'>References</h2>
+        {% endif %}
+        <p>{%- bibliography --cited -%}</p>
+      {% endif %}
+
+      <!-- Licença -->
+      {% if lang == 'pt' %}
+        <h2 id='license'>Licença</h2>
+        <p style="text-align: left;">
+          <div class="card">
+            <div class="card_content">
+              <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0; margin-left: 0; margin-bottom: 5px;" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"/></a>
+              Esta obra está licenciada sob a <a class="license" target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.<br/>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card_content">
+              Você é livre para:<br/>
+              <b>Compartilhar</b> — copie e redistribua o material em qualquer meio ou formato.<br/>
+              <br/>
+              Nos seguintes termos:<br/>
+              <b>Atribuição</b> — Você deve dar os devidos créditos, fornecer um link para a licença e indicar se foram feitas alterações. Você pode fazê-lo de qualquer maneira razoável, mas não de forma que sugira que o licenciante endossa você ou seu uso.<br/>
+              <b>Não Comercial</b> — Você não pode usar o material para fins comerciais.<br/>
+              <b>Sem Derivativos</b> — Se você remixar, transformar ou construir sobre o material, não poderá distribuir o material modificado.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card_content">
+              {%- highlight plaintext -%}
+                "{{ page.title | escape }}
+                {%- if page.subtitle != null -%}
+                : {{ page.subtitle | escape }}
+                {%- endif -%}" de⠀
+                
+                {%- if page.authors != null -%}
+                  {%- for author in page.authors -%}
+                    {%- for member in site.members -%}
+                      {%- assign _member = member.path | replace: "_members/", "" | replace: ".md", "" -%}
+                      {%- if _member == author -%}
+                        {{ member.title }},⠀
+                      {%- endif -%}
+                    {%- endfor -%}
+                  {%- endfor -%}
+                {%- endif -%}
+
+                {%- if page.collaborators != null -%}
+                  {%- for author in page.collaborators -%}
+                    {%- for member in site.members -%}
+                      {%- assign _member = member.path | replace: "_members/", "" | replace: ".md", "" -%}
+                      {%- if _member == author -%}
+                        {{ member.title }},⠀
+                      {%- endif -%}
+                    {%- endfor -%}
+                  {%- endfor -%}
+                {%- endif -%}
+
+                {%- if page.advisors != null -%}
+                  {%- for author in page.advisors -%}
+                    {%- for member in site.members -%}
+                      {%- assign _member = member.path | replace: "_members/", "" | replace: ".md", "" -%}
+                      {%- if _member == author -%}
+                        {{ member.title }},⠀
+                      {%- endif -%}
+                    {%- endfor -%}
+                  {%- endfor -%}
+                {%- endif -%}
+
+                está licenciada sob a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. Baseado em um trabalho em {{ site.url }}{{ page.url }}
+              {%- endhighlight -%}
+            </div>
+          </div>
+        </p>
+      {% else %}
+        <h2 id='license'>License</h2>
+        <p style="text-align: left;">
+          <div class="card">
+            <div class="card_content">
+              <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0; margin-left: 0; margin-bottom: 5px;" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"/></a>
+              This work is licensed under a <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.<br/>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card_content">
+              You are free to:<br/>
+              <b>Share</b> — copy and redistribute the material in any medium or format.<br/>
+              <br/>
+              Under the following terms:<br/>
+              <b>Attribution</b> — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.<br/>
+              <b>NonCommercial</b> — You may not use the material for commercial purposes.<br/>
+              <b>NoDerivatives</b> — If you remix, transform, or build upon the material, you may not distribute the modified material.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card_content">
+              {%- highlight plaintext -%}
+                "{{ page.title | escape }}
+                {%- if page.subtitle != null -%}
+                  : {{ page.subtitle | escape }}
+                {%- endif -%}" by⠀
+
+                {%- if page.authors != null -%}
+                  {%- for author in page.authors -%}
+                    {%- for member in site.members -%}
+                      {%- assign _member = member.path | replace: "_members/", "" | replace: ".md", "" -%}
+                      {%- if _member == author -%}
+                        {{ member.title }},⠀
+                      {%- endif -%}
+                    {%- endfor -%}
+                  {%- endfor -%}
+                {%- endif -%}
+
+                {%- if page.collaborators != null -%}
+                  {%- for author in page.collaborators -%}
+                    {%- for member in site.members -%}
+                      {%- assign _member = member.path | replace: "_members/", "" | replace: ".md", "" -%}
+                      {%- if _member == author -%}
+                        {{ member.title }},⠀
+                      {%- endif -%}
+                    {%- endfor -%}
+                  {%- endfor -%}
+                {%- endif -%}
+
+                {%- if page.advisors != null -%}
+                  {%- for author in page.advisors -%}
+                    {%- for member in site.members -%}
+                      {%- assign _member = member.path | replace: "_members/", "" | replace: ".md", "" -%}
+                      {%- if _member == author -%}
+                        {{ member.title }},⠀
+                      {%- endif -%}
+                    {%- endfor -%}
+                  {%- endfor -%}
+                {%- endif -%}
+
+                is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. Based on a work at {{ site.url }}{{ page.url }}
+              {%- endhighlight -%}
+            </div>
+          </div>
+        </p>
+      {% endif %}
+    </div>
+</article>
+
+<script>
+  function setPaper(lang) {
+    /// Dados para processamento.
+    // Obtém todos os conteúdos para processamento.
+    var content = document.querySelector(".paper-content").querySelectorAll("h2, h3, .ref-figure, .ref-animation");
+    // Verifica se existe algo para processar.
+    if (content.length === 0) { return; }
+
+    /// Configuração do idioma.
+    // Declarações de variáveis.
+    var name_figure;
+    var name_animation;
+    // Atribuição das variáveis.
+    switch(lang) {
+      case "pt":
+        name_figure = "Figura";
+        name_animation = "Animação";
+        break;
+      default:
+        name_figure = "Figure";
+        name_animation = "Animation";
+        break;
+    }
+
+    /// Controle de numeração.
+    // Estrutura de dados para armazenamento da numeração.
+    let refs_data = new Map();
+    // Variáveis contadoras.
+    var section = 0;
+    var sub_section = 1;
+    var ref_figure = 1;
+    var ref_animation = 1;
+
+    /// Configuração das seções e subseções.
+    // Percorre cada elemento de seção, subseção e elementos de mídia.
+    for (var i = 0; i < content.length; i++) {
+      var h = content[i];
+      if(h.tagName == 'H2') {
+        // Atualizando numeração das seções.
+        section++;
+        content[i].innerHTML = section + '. ' + h.textContent;        
+        // Reiniciando contadoras.
+        sub_section = 1;
+        ref_figure = 1;
+        ref_animation = 1;
+      } else if (h.tagName == 'H3') {
+        // Atualizando numeração das subseções.
+        content[i].innerHTML = section + '.' + sub_section + '. ' + h.textContent;
+        sub_section++;
+      }
+
+      if(h.tagName == 'DIV') {
+        if(h.className == 'ref-figure') {
+          // Atualizando numeração das figuras.
+          content[i].innerHTML = '<b>' + name_figure + ' ' + section + '.' + ref_figure + ' </b>– ' + h.textContent;
+          refs_data.set(content[i].id, section + '.' + ref_figure);
+          ref_figure++;
+        } else if (h.className == 'ref-animation') {
+          // Atualizando numeração das animações.
+          content[i].innerHTML = '<b>' + name_animation + ' ' + section + '.' + ref_animation + ' </b>– ' + h.textContent;
+          refs_data.set(content[i].id, section + '.' + ref_animation);
+          ref_animation++;
+        }
+      }
+    }
+
+    /// Atualizando todos os links de citação das mídias.
+    // Obtém todas as citações do texto.
+    var refs = document.querySelectorAll(".ref");
+    // Percorre todas as citações do texto.
+    for (var i = 0; i < refs.length; i++) {
+      var aux = refs[i].innerHTML.split("-");
+      if (aux.length != 0) {
+        switch (aux[0]) {
+          case "fig":
+            refs[i].innerHTML = name_figure + ' ' + refs_data.get(refs[i].innerHTML);
+            break;
+          case "ani":
+            refs[i].innerHTML = name_animation + ' ' + refs_data.get(refs[i].innerHTML);
+            break;
+          default:
+            refs[i].innerHTML = refs_data.get(refs[i].innerHTML);
+            break;
+        }
+      }      
+    }
+    // Limpando todos os dados.
+    refs_data.clear();
+
+    /// Correção dos links das demais citações do texto.
+    var citations = document.querySelectorAll(".citation");
+    for (var i = 0; i < citations.length; i++) {
+      // Adicionando animação suave até a seção 'referêncas'.
+      var aux = citations[i].href.split("#");
+      citations[i].href = '#h-' + aux[1];
+    }
+  }
+  function setClipboardButtom() {
+    var codeBlocks = document.querySelectorAll('.highlight');
+
+    codeBlocks.forEach(function (codeBlock) {
+      var copyButton = document.createElement('button');
+      copyButton.className = 'copy';
+      copyButton.type = 'button';
+      copyButton.ariaLabel = 'Copy code to clipboard';
+      copyButton.innerText = 'Copy';
+
+      codeBlock.append(copyButton);
+
+      copyButton.addEventListener('click', function () {
+        var code = codeBlock.querySelector('code').innerText.trim();
+        window.navigator.clipboard.writeText(code);
+
+        copyButton.innerText = 'Copied';
+        var fourSeconds = 4000;
+
+        setTimeout(function () {
+          copyButton.innerText = 'Copy';
+        }, fourSeconds);
+      });
+    });
+  }
+  
+  setPaper(document.querySelector(".paper-lang").lang);
+  setClipboardButtom();
+</script>

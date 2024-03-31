@@ -1,0 +1,12 @@
+{% assign split_mark = '<|>' %}
+
+{% assign library_categories = '' %}
+{% for category in site.library %}
+  {% assign name = category.categories | first %}
+  {% assign library_categories = library_categories | append: split_mark | append: name %}
+{% endfor %}
+
+{% assign return = library_categories
+  | remove_first: split_mark
+  | split: split_mark
+  | sort: self %}

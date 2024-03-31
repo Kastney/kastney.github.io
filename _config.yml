@@ -1,6 +1,37 @@
 # bundle exec jekyll serve --livereload
 
 title: "@kastney"
+email: kastney@gmail.com
+author: Kastney
+
+copyright: "(c) {currentYear}, {author}. Todos os direitos reservados."
+description: >-
+  Sou apaixonado por tecnologia e sempre estou em busca de novos desafios. 
+  Gosto de passar meu tempo livre aprendendo sobre novos desenvolvimentos e 
+  tendências na minha área de interesse.
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. https://example.com
+favicon: "/assets/images/favicon.png"
+
+# Yat settings
+yat:
+  date_format: "%d/%m/%Y"
+
+# Language settings
+lang: "pt"
+
+# Theme settings
+night_mode: "auto"
+
+# Menu settings
+header_menu:
+  blog:
+    path: /blog/
+    title: Blog
+  gallery:
+    path: /games/
+    title: Games
 
 # Collections settings
 collections_dir: _collections
@@ -27,6 +58,12 @@ scholar:
   sort_by: ascending
   order: des
 
+# Build settings
+markdown: kramdown
+kmarkdown:
+  input: GFM
+
+# Plugins settings
 plugins:
   - jekyll-timeago
   - jekyll-feed
