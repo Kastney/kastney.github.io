@@ -4,7 +4,7 @@ title: "@kastney"
 email: kastney@gmail.com
 author: Kastney
 
-copyright: "(c) {currentYear}, {author}. Todos os direitos reservados."
+copyright: "(c) {currentYear} {author}. Todos os direitos reservados."
 description: >-
   Sou apaixonado por tecnologia e sempre estou em busca de novos desafios. 
   Gosto de passar meu tempo livre aprendendo sobre novos desenvolvimentos e 
@@ -25,13 +25,10 @@ lang: "pt"
 night_mode: "auto"
 
 # Menu settings
-header_menu:
-  blog:
-    path: /blog/
-    title: Blog
-  gallery:
-    path: /games/
-    title: Games
+#header_menu:
+#  blog:
+#    path: /blog/
+#    title: Blog
 
 # Collections settings
 collections_dir: _collections
@@ -58,10 +55,9 @@ scholar:
   sort_by: ascending
   order: des
 
-# Build settings
-markdown: kramdown
-kmarkdown:
-  input: GFM
+# Markdown settings
+kramdown:
+  input: Kramdown
 
 # Plugins settings
 plugins:
