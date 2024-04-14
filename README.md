@@ -1,0 +1,3 @@
+# Kastney's personal website
+
+Under construction at the moment...
