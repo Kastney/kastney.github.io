@@ -9,11 +9,9 @@
 
     {%- include views/banner.html -%}
 
-  <!--
     {%- include extensions/hashlocate.html -%}
-  -->
   
-    {%- include extensions/theme-toggle.html -%}
+  <!-- {%- include extensions/theme-toggle.html -%} -->
 
     {%- include extensions/click-to-top.html -%}
 
