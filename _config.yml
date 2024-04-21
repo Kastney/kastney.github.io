@@ -7,12 +7,12 @@ author: Kastney
 copyright: "(c) {currentYear} {author}. Todos os direitos reservados."
 description: >-
   Sou apaixonado por tecnologia e sempre estou em busca de novos desafios. 
-  Gosto de passar meu tempo livre aprendendo sobre novos desenvolvimentos e 
-  tendências na minha área de interesse.
+  Gosto de passar meu tempo livre aprendendo sobre novas tecnologias e 
+  tendências na área de Ciência da Computação e afins.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. https://example.com
-favicon: "/assets/images/favicon.png"
+favicon: "" #"/assets/images/favicon.png"
 
 # Yat settings
 yat:
