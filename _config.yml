@@ -1,26 +1,26 @@
 # bundle exec jekyll serve --livereload
 
-title: "@kastney"
-email: kastney@gmail.com
-author: Kastney
+#title: "@kastney"
+#email: kastney@gmail.com
+#author: Kastney
 
-copyright: "(c) {currentYear} {author}. Todos os direitos reservados."
-description: >-
-  💙 Software Engineer and Content Creator of Programming and Technology
+#copyright: "(c) {currentYear} {author}. Todos os direitos reservados."
+#description: >-
+#  💙 Software Engineer and Content Creator of Programming and Technology
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. https://example.com
-favicon: "" #"/assets/images/favicon.png"
+#baseurl: "" # the subpath of your site, e.g. /blog
+#url: "" # the base hostname & protocol for your site, e.g. https://example.com
+#favicon: "" #"/assets/images/favicon.png"
 
 # Yat settings
-yat:
-  date_format: "%d/%m/%Y"
+#yat:
+#  date_format: "%d/%m/%Y"
 
 # Language settings
-lang: "pt"
+#lang: "pt"
 
 # Theme settings
-night_mode: "auto"
+#night_mode: "auto"
 
 # Menu settings
 #header_menu:
@@ -29,33 +29,33 @@ night_mode: "auto"
 #    title: Blog
 
 # Collections settings
-collections_dir: _collections
-collections:
-  blog:
-    output: true
-    permalink: /blog/:name/
-  games:
-    output: true
-    permalink: /games/:name/
+#collections_dir: _collections
+#collections:
+#  blog:
+#    output: true
+#    permalink: /blog/:name/
+#  games:
+#    output: true
+#    permalink: /games/:name/
 
 # Paginate settings
-pagination:
-  enabled: true
-  debug: false
-  permalink: '/:num/'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
+#pagination:
+#  enabled: true
+#  debug: false
+#  permalink: '/:num/'
+#  limit: 0
+#  sort_field: 'date'
+#  sort_reverse: true
 
 # Bibliografy settings
-scholar:
-  style: assets/bibliography/apa.csl
-  sort_by: ascending
-  order: des
+#scholar:
+#  style: assets/bibliography/apa.csl
+#  sort_by: ascending
+#  order: des
 
 # Markdown settings
-kramdown:
-  input: Kramdown
+#kramdown:
+#  input: Kramdown
 
 # Plugins settings
 plugins:
