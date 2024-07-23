@@ -1,9 +1,0 @@
-{%- include functions.html func='log' level='debug' msg='Get library categories value' -%}
-
-{%- include functions.html func='get_library_categories' -%}
-{% assign library_categories = return %}
-
-{% assign keys = library_categories | uniq %}
-{% assign field = 'categories' %}
-{% assign url = '/library/tracks/' | relative_url %}
-{% include sidebar/library-common-list.html %}
