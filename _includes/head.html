@@ -1,5 +1,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Documento</title>
+  <link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon">
+  <title>
+    {%- if page.title != null -%}
+    {{ page.title }} | {{ site.title }}
+    {%- else -%}
+    {{ site.title }}
+    {%- endif -%}
+  </title>
 </head>

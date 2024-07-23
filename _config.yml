@@ -1,8 +1,16 @@
 # bundle exec jekyll serve --livereload
 
+# General settings
+title: "@kastney"
+favicon: "/assets/images/favicon.ico"
+
 # Language settings
 lang: "pt-br"
 
+# Markdown settings
+kramdown:
+  input: Kramdown
+  
 # Plugins settings
 plugins:
   - jekyll-timeago

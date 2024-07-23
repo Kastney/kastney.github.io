@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang }}">
   {%- include head.html -%}
   <body>
-    <h1>Olá, Mundo!</h1>
+    {{ content }}
   </body>
 </html>
