@@ -1,10 +1,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <!-- Favicon -->
   <link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon">
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  
+  <!-- Styles -->
+  {%- include head/styles.html -%}
+
   <!-- Title -->
   <title>
     {%- if page.title != null -%}
@@ -13,5 +16,7 @@
     {{ site.title }}
     {%- endif -%}
   </title>
+
+  <!-- Fonts -->
   {%- include head/font.html -%}
 </head>
