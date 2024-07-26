@@ -1,3 +1,5 @@
+/* Header */
+
 header{
     padding: 20px;
     width: 100%;
@@ -25,9 +27,10 @@ header a{
 
 .header-menu ul{
     list-style-type: none;
+    text-align: right;
 }
 
 .header-menu li{
     display: inline-block;
-    margin: 0 15px;
+    margin: 0 10px;
 }
