@@ -1,0 +1,23 @@
+header{
+    padding: 20px;
+}
+
+header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div section a{
+    color: white;
+    text-decoration: none;
+}
+
+.header-menu nav ul{
+    list-style-type: none;
+}
+
+.header-menu nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}

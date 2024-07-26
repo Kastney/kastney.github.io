@@ -7,13 +7,20 @@ favicon: "/assets/images/favicon.ico"
 # Language settings
 lang: "pt-br"
 
-# Styles settings
-sass:
-  style: compressed
-
 # Markdown settings
 kramdown:
   input: kramdown
+
+# Optimization settings
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  blanklines: true
+  profile: false
+  startings: [html, head, body]
+sass:
+  style: compressed
   
 # Plugins settings
 plugins:

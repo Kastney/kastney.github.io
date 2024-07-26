@@ -1,0 +1,22 @@
+<header>
+    <div>
+        <section class="header-logo">
+            <a target="_self" rel="author" href="{{ "/" | relative_url }}">{{ site.title }}</a>
+        </section>
+
+        {%- assign items = site.pages -%}      
+        {%- if items -%}
+        <section class="header-menu">
+            <nav>
+                <ul>
+                    {%- for item in items -%}
+                    {%- if item.menu-enabled == true -%}
+                    <li><a target="_self" href="{{ item.permalink | relative_url }}">{{ item.title | upcase | escape }}</a></li>
+                    {%- endif -%}
+                    {%- endfor -%}
+                </ul>
+            </nav>
+        </section>
+        {%- endif -%}
+    </div>
+</header>
