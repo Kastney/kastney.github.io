@@ -1,5 +1,9 @@
 header{
     padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 header div{
@@ -8,16 +12,22 @@ header div{
     align-items: center;
 }
 
-header div section a{
+header a{
     color: white;
     text-decoration: none;
 }
 
-.header-menu nav ul{
+/* Header Menu */
+
+.header-menu a:hover{
+    text-decoration: underline;
+}
+
+.header-menu ul{
     list-style-type: none;
 }
 
-.header-menu nav ul li{
+.header-menu li{
     display: inline-block;
     margin: 0 15px;
 }

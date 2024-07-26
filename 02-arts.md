@@ -1,6 +1,6 @@
 ---
 layout: default
 title: "Artes"
-permalink: /art/
+permalink: /arts/
 menu-enabled: true
 ---
