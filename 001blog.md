@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Artes"
-permalink: /arts/
+title: "Blog"
+permalink: "/blog/"
 menu-enabled: true
 ---

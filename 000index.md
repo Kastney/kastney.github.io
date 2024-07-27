@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Início"
-permalink: /
+permalink: "/"
 ---
 
 # Olá, Mundo!

@@ -1,6 +1,6 @@
 ---
 layout: default
 title: "Jogos"
-permalink: /games/
+permalink: "/games/"
 menu-enabled: true
 ---
