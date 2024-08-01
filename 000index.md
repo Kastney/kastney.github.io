@@ -4,6 +4,6 @@ title: "Início"
 permalink: "/"
 ---
 
-# Olá, Mundo!
+# Em contrução …
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur eaque, molestiae quibusdam distinctio accusantium consectetur provident neque. Quae cumque voluptas reprehenderit, architecto cupiditate nisi, nemo molestiae doloribus veritatis dolorum nobis.
+Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve
