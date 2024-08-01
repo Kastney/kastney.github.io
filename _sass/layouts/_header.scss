@@ -7,7 +7,8 @@ header{
     left: 0;
     position: fixed;
     background-color: white;
-    transition: .2s;
+    transition: .3s;
+    box-shadow: 0 0 5px #00000060;
 }
 
 header div{
@@ -43,6 +44,7 @@ html {
     &[scroll-status='top']{
         header{
             background-color: transparent;
+            box-shadow: none;
         }
         header a{
             color: white;
@@ -51,9 +53,10 @@ html {
     &[scroll-status='down'] {
         header{
             background-color: transparent;
+            box-shadow: none;
         }
         header div{
-            transform: scale(0);
+            visibility: hidden;
         }
     }
 }
