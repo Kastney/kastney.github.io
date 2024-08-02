@@ -2,43 +2,42 @@
 
 header{
     padding: 20px;
-    width: 100%;    
+    width: 100%;
     top: 0;
     left: 0;
     position: fixed;
     background-color: white;
-    transition: .3s;
     box-shadow: 0 0 5px #00000060;
-}
-
-header div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header a{
-    color: black;
-    text-decoration: none;
+    transition: .4s;
+    div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+        transition: .4s;    
+    }
 }
 
 /* Header Menu */
 
-.header-menu a:hover{
-    text-decoration: underline;
+.header-menu{
+    a:hover{
+        text-decoration: underline;
+    }
+    ul{
+        list-style-type: none;
+        text-align: right;
+    }
+    li{
+        display: inline-block;
+        margin: 0 10px;
+    }
 }
 
-.header-menu ul{
-    list-style-type: none;
-    text-align: right;
-}
-
-.header-menu li{
-    display: inline-block;
-    margin: 0 10px;
-}
-
-/* Animation */
+/* Scroll Status */
 
 html {
     &[scroll-status='top']{
@@ -54,6 +53,9 @@ html {
         header{
             background-color: transparent;
             box-shadow: none;
+        }
+        header a{
+            color: transparent;
         }
         header div{
             visibility: hidden;
