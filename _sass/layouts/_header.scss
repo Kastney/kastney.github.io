@@ -44,21 +44,19 @@ html {
         header{
             background-color: transparent;
             box-shadow: none;
-        }
-        header a{
-            color: white;
+            a{
+                color: white;
+            }
         }
     }
     &[scroll-status='down'] {
         header{
             background-color: transparent;
             box-shadow: none;
-        }
-        header a{
-            color: transparent;
-        }
-        header div{
             visibility: hidden;
+            a{
+                color: transparent;
+            }
         }
     }
 }
