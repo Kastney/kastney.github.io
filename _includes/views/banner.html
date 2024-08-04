@@ -1,2 +1,17 @@
 <section class="banner">
+    {%- if page.banner -%}
+        {%- if page.banner.video -%}
+            Banner com vídeo
+        {%- else if page.banner.image -%}
+            <img src="{{page.banner.image}}" alt="Banner" oncontextmenu="return false;"/>
+            <div class="content">
+                <h1>{{ page.banner.title | default: page.title | escape }}</h1>
+                {%- if page.subtitle -%}
+                <p>{{ page.subtitle | escape }}</p>
+                {%- endif -%}
+            </div>
+        {%- endif -%}
+    {%- else -%}
+        Banner padrão
+    {%- endif -%}
 </section>

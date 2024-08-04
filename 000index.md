@@ -1,7 +1,11 @@
 ---
 layout: default
 title: "Início"
+subtitle: "Subtítulo aqui"
 permalink: "/"
+banner:
+    title: "Kastney"
+    image: "/assets/banner/banner.jpg"
 ---
 
 # Em contrução …

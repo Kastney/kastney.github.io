@@ -1,6 +1,6 @@
 /* Header */
 
-header{
+header {
     padding: 20px;
     width: 100%;
     top: 0;
@@ -9,12 +9,15 @@ header{
     background-color: white;
     box-shadow: 0 0 5px #00000060;
     transition: .4s;
-    div{
+    z-index: 5;
+    
+    div {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    a{
+    
+    a {
         color: black;
         text-decoration: none;
         transition: .4s;    
@@ -23,15 +26,17 @@ header{
 
 /* Header Menu */
 
-.header-menu{
-    a:hover{
+.header-menu {
+    a:hover {
         text-decoration: underline;
     }
-    ul{
+    
+    ul {
         list-style-type: none;
         text-align: right;
     }
-    li{
+    
+    li {
         display: inline-block;
         margin: 0 10px;
     }
@@ -39,24 +44,25 @@ header{
 
 /* Scroll Status */
 
-html {
-    &[scroll-status='top']{
-        header{
-            background-color: transparent;
-            box-shadow: none;
-            a{
-                color: white;
-            }
+html[scroll-status='top'] {
+    header {
+        background-color: transparent;
+        box-shadow: none;
+        
+        a {
+            color: white;
         }
     }
-    &[scroll-status='down'] {
-        header{
-            background-color: transparent;
-            box-shadow: none;
-            visibility: hidden;
-            a{
-                color: transparent;
-            }
+}
+
+html[scroll-status='down'] {
+    header {
+        background-color: transparent;
+        box-shadow: none;
+        visibility: hidden;
+        
+        a {
+            color: transparent;
         }
     }
 }

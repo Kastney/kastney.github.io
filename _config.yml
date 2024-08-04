@@ -1,7 +1,7 @@
 # bundle exec jekyll serve --livereload
 
 # General settings
-title: "@kastney"
+title: "kastney"
 favicon: "/assets/images/favicon.ico"
 
 # Language settings
@@ -13,12 +13,12 @@ kramdown:
 
 # Optimization settings
 compress_html:
-  clippings: all
+#  clippings: all
   comments: ["<!-- ", " -->"]
-  endings: all
-  blanklines: true
-  profile: false
-  startings: [html, head, body]
+#  endings: all
+#  blanklines: true
+#  profile: false
+#  startings: [html, head, body]
 sass:
   style: compressed
   
