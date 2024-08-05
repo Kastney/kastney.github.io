@@ -2,7 +2,7 @@
     position: relative;
     color: white;
     height: 100vh;
-    transition: .4s;
+    transition: .3s;
     
     .content {
         position: relative;
@@ -41,5 +41,5 @@
 }
 
 html:not([scroll-status='top']) .banner {
-    height: 50vh;
+    height: 75vh;
 }

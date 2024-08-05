@@ -1,0 +1,30 @@
+.click-to-top{
+    display: flex;
+    z-index: 3;
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    background: white;
+    box-shadow: 0 0 5px #00000060;
+    position: fixed;
+    right: 60px;
+    bottom: 48px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: .3s;
+    cursor: pointer;
+
+    i{
+        transition: .3s;
+    }
+}
+
+html[scroll-status='top'] .click-to-top {
+    background-color: transparent;
+    visibility: hidden;
+
+    i{
+        color: transparent;
+    }
+}

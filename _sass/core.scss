@@ -8,9 +8,11 @@
 }
 
 body{
-    background-color: rgb(255, 255, 255);
+    color: #353535;
+    background-color: white;
 }
 
 @import
     "layouts/header",
-    "layouts/banner";
+    "layouts/banner",
+    "layouts/click-to-top";
