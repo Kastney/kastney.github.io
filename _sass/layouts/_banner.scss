@@ -49,10 +49,6 @@
         bottom: 5px; /* Posiciona o botão 5 pixels acima da borda inferior da tela */
         cursor: pointer; /* Define o cursor como ponteiro ao passar sobre o botão */
         animation: bounce 2s infinite; /* Aplica a animação de pulo */
-        user-select: none; /* Desativa a seleção de texto dentro do botão */
-        -webkit-user-select: none; /* Desativa a seleção de texto no Safari */
-        -moz-user-select: none; /* Desativa a seleção de texto no Firefox */
-        -ms-user-select: none; /* Desativa a seleção de texto no IE e Edge */
         
         span, i {
             color: white; /* Define a cor do texto e do ícone dentro do botão como branco */

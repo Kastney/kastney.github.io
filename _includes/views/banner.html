@@ -5,12 +5,12 @@
         {%- else if page.banner.image -%}
             <img src="{{page.banner.image}}" alt="Banner" oncontextmenu="return false;"/>
             <div class="content">
-                <h1>{{ page.banner.title | default: page.title | escape }}</h1>
+                <h1 class="unselectable">{{ page.banner.title | default: page.title | escape }}</h1>
                 {%- if page.subtitle -%}
-                <p>{{ page.subtitle | escape }}</p>
+                <p class="unselectable">{{ page.subtitle | escape }}</p>
                 {%- endif -%}
             </div>
-            <div id="click-to-more" class="click-to-more">
+            <div id="click-to-more" class="click-to-more unselectable">
                 <span>Desça para saber mais</span>
                 <i class="fa fa-arrow-down"></i>
             </div>

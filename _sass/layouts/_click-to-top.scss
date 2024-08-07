@@ -14,10 +14,6 @@
     font-size: 24px; /* Define o tamanho da fonte do ícone */
     transition: .3s; /* Adiciona uma transição suave de 0.3 segundos */
     cursor: pointer; /* Muda o cursor para ponteiro ao passar sobre o botão */
-    user-select: none; /* Desativa a seleção de texto */
-    -webkit-user-select: none; /* Desativa a seleção de texto no Safari */
-    -moz-user-select: none; /* Desativa a seleção de texto no Firefox */
-    -ms-user-select: none; /* Desativa a seleção de texto no IE e Edge */
 
     i {
         transition: .3s; /* Adiciona uma transição suave de 0.3 segundos ao ícone */

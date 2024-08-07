@@ -13,6 +13,13 @@ body {
     background-color: white; /* Define a cor de fundo do body como branca */
 }
 
+.unselectable{
+    user-select: none; /* Desativa a seleção de texto dentro do botão */
+    -webkit-user-select: none; /* Desativa a seleção de texto no Safari */
+    -moz-user-select: none; /* Desativa a seleção de texto no Firefox */
+    -ms-user-select: none; /* Desativa a seleção de texto no IE e Edge */
+}
+
 /* Importa outros arquivos de estilo */
 @import
     "layouts/header", /* Importa estilos do arquivo "header" localizado na pasta "layouts" */
