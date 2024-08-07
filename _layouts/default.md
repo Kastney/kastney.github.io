@@ -13,8 +13,10 @@ layout: compress
     {{ content }}
     </section>
     <script >
+    {%- include scripts/core.js -%}
     {%- include scripts/scroll-status.js -%}
     {%- include scripts/click-to-top.js -%}
+    {%- include scripts/click-to-more.js -%}
     {%- include scripts/contextmenu-disabled.js -%}
     </script>
   </body>
