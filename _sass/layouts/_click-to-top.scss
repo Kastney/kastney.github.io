@@ -14,6 +14,10 @@
     font-size: 24px;
     transition: .3s;
     cursor: pointer;
+    user-select: none; /* Desativa a seleção de texto */
+    -webkit-user-select: none; /* Desativa a seleção de texto no Safari */
+    -moz-user-select: none; /* Desativa a seleção de texto no Firefox */
+    -ms-user-select: none; /* Desativa a seleção de texto no IE e Edge */
 
     i{
         transition: .3s;
