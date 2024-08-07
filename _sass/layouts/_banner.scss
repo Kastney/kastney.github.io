@@ -1,85 +1,85 @@
 .banner {
-    position: relative;
-    color: white;
-    height: 100vh;
-    transition: .3s;
-    
+    position: relative; /* Define a posição relativa para que os elementos internos possam ser posicionados em relação a ela */
+    color: white; /* Define a cor do texto dentro da seção como branco */
+    height: 100vh; /* Define a altura da seção para 100% da altura da tela */
+    transition: .3s; /* Adiciona uma transição suave de 0.3 segundos para mudanças de estilo */
+
     .content {
-        position: relative;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        margin: 0 30px;
-        text-align: center;
+        position: relative; /* Define a posição relativa para que o z-index funcione corretamente */
+        z-index: 2; /* Garante que o conteúdo esteja acima da imagem de fundo */
+        display: flex; /* Usa flexbox para o layout */
+        flex-direction: column; /* Alinha os itens em coluna */
+        justify-content: center; /* Centraliza os itens verticalmente */
+        align-items: center; /* Centraliza os itens horizontalmente */
+        height: 100%; /* Ocupa 100% da altura da seção */
+        margin: 0 30px; /* Adiciona margem horizontal de 30 pixels */
+        text-align: center; /* Centraliza o texto dentro da `.content` */
         
         h1 {
-            font-size: 2em;
-            font-weight: 400;
+            font-size: 2em; /* Define o tamanho da fonte para o título */
+            font-weight: 400; /* Define a espessura da fonte para o título */
         }
         
         p {
-            font-size: 1.25em;
+            font-size: 1.25em; /* Define o tamanho da fonte para o parágrafo */
         }
     }
     
     img {
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-        pointer-events: none;
-        user-drag: none;
-        -webkit-user-drag: none;
+        position: absolute; /* Posiciona a imagem de forma absoluta em relação à `.banner` */
+        z-index: 1; /* Garante que a imagem fique abaixo do conteúdo */
+        top: 0; /* Posiciona a imagem no topo da seção */
+        left: 0; /* Posiciona a imagem à esquerda da seção */
+        height: 100%; /* Define a altura da imagem para 100% da altura da seção */
+        width: 100%; /* Define a largura da imagem para 100% da largura da seção */
+        object-fit: cover; /* Faz com que a imagem cubra toda a área do contêiner */
+        object-position: center; /* Centraliza a imagem dentro do contêiner */
+        pointer-events: none; /* Desativa eventos do ponteiro (como cliques) na imagem */
+        user-drag: none; /* Desativa a possibilidade de arrastar a imagem */
+        -webkit-user-drag: none; /* Desativa a possibilidade de arrastar a imagem no Safari */
     }
 
-    .click-to-more{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: fixed;
-        z-index: 3;
-        right: 50%;
-        bottom: 20px;
-        cursor: pointer;
-        animation: bounce 2s infinite;
-        user-select: none; /* Desativa a seleção de texto */
+    .click-to-more {
+        display: flex; /* Usa flexbox para o layout */
+        flex-direction: column; /* Alinha os itens em coluna */
+        align-items: center; /* Centraliza os itens horizontalmente */
+        position: fixed; /* Fixa a posição do botão na tela */
+        z-index: 3; /* Garante que o botão esteja acima de outros elementos */
+        right: 50%; /* Posiciona o botão à direita do centro da tela */
+        bottom: 5px; /* Posiciona o botão 5 pixels acima da borda inferior da tela */
+        cursor: pointer; /* Define o cursor como ponteiro ao passar sobre o botão */
+        animation: bounce 2s infinite; /* Aplica a animação de pulo */
+        user-select: none; /* Desativa a seleção de texto dentro do botão */
         -webkit-user-select: none; /* Desativa a seleção de texto no Safari */
         -moz-user-select: none; /* Desativa a seleção de texto no Firefox */
         -ms-user-select: none; /* Desativa a seleção de texto no IE e Edge */
         
-        span, i{
-            color: white;
-            transition: .3s;
+        span, i {
+            color: white; /* Define a cor do texto e do ícone dentro do botão como branco */
+            transition: .3s; /* Adiciona uma transição suave de 0.3 segundos para mudanças de estilo */
         }
     }
 }
 
-html:not([scroll-status='top']){
+html:not([scroll-status='top']) {
     .banner {
-        height: 65vh;
+        height: 65vh; /* Reduz a altura da seção quando o scroll não está no topo */
     }
 
     .click-to-more {
-        visibility: hidden;
-    
-        span, i{
-            color: transparent;
+        visibility: hidden; /* Torna o botão invisível quando não no topo */
+        
+        span, i {
+            color: transparent; /* Torna o texto e o ícone transparentes quando não no topo */
         }
     }
 }
 
 @keyframes bounce {
     0%, 100% {
-        transform: translate(50%, 0);
+        transform: translate(50%, 0); /* Define a posição inicial e final da animação */
     }
     50% {
-        transform: translate(50%, -10px);
+        transform: translate(50%, -10px); /* Define a posição intermediária da animação para criar o efeito de pulo */
     }
 }

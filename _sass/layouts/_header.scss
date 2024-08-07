@@ -1,68 +1,65 @@
 /* Header */
-
 header {
-    padding: 20px;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background-color: white;
-    box-shadow: 0 0 5px #00000060;
-    transition: .3s;
-    z-index: 5;
-    
+    padding: 20px; /* Espaçamento interno ao redor do conteúdo do cabeçalho */
+    width: 100%; /* Largura total da tela */
+    top: 0; /* Posiciona o cabeçalho no topo da tela */
+    left: 0; /* Posiciona o cabeçalho à esquerda da tela */
+    position: fixed; /* Fixa a posição do cabeçalho na tela */
+    background-color: white; /* Define a cor de fundo do cabeçalho */
+    box-shadow: 0 0 5px #00000060; /* Adiciona uma sombra ao cabeçalho */
+    transition: .3s; /* Adiciona uma transição suave de 0.3 segundos para mudanças de estilo */
+    z-index: 5; /* Garante que o cabeçalho fique acima de outros elementos */
+
     div {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        display: flex; /* Usa flexbox para o layout interno */
+        justify-content: space-between; /* Distribui o espaço entre os itens de forma igual */
+        align-items: center; /* Alinha os itens verticalmente no centro */
     }
-    
+
     a {
-        color: black;
-        text-decoration: none;
-        transition: .3s;
+        color: black; /* Define a cor do texto dos links como preto */
+        text-decoration: none; /* Remove o sublinhado dos links */
+        transition: .3s; /* Adiciona uma transição suave de 0.3 segundos para mudanças de estilo */
     }
 }
 
 /* Header Menu */
-
 .header-menu {
     a:hover {
-        text-decoration: underline;
+        text-decoration: underline; /* Adiciona um sublinhado aos links quando o cursor passa sobre eles */
     }
-    
+
     ul {
-        list-style-type: none;
-        text-align: right;
+        list-style-type: none; /* Remove os marcadores das listas */
+        text-align: right; /* Alinha o texto da lista à direita */
     }
-    
+
     li {
-        display: inline-block;
-        margin: 0 10px;
+        display: inline-block; /* Exibe os itens da lista em linha */
+        margin: 0 10px; /* Adiciona margem horizontal entre os itens da lista */
     }
 }
 
 /* Scroll Status */
-
 html[scroll-status='top'] {
     header {
-        background-color: transparent;
-        box-shadow: none;
-        
+        background-color: transparent; /* Torna o fundo do cabeçalho transparente quando no topo */
+        box-shadow: none; /* Remove a sombra do cabeçalho quando no topo */
+
         a {
-            color: white;
+            color: white; /* Muda a cor dos links para branco quando no topo */
         }
     }
 }
 
 html[scroll-status='down'] {
     header {
-        background-color: transparent;
-        box-shadow: none;
-        visibility: hidden;
-        
+        background-color: transparent; /* Torna o fundo do cabeçalho transparente quando rolando para baixo */
+        box-shadow: none; /* Remove a sombra do cabeçalho quando rolando para baixo */
+        visibility: hidden; /* Torna o cabeçalho invisível quando rolando para baixo */
+
         a {
-            color: transparent;
+            color: transparent; /* Torna os links invisíveis quando rolando para baixo */
         }
     }
 }

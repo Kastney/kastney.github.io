@@ -1,18 +1,20 @@
-@charset "utf-8";
+@charset "utf-8"; /* Define a codificação de caracteres como UTF-8, que é uma codificação padrão para a maioria dos sites */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+/* Estilos gerais aplicados a todos os elementos */
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui a borda e o preenchimento no cálculo da largura e altura dos elementos */
+    font-family: "Poppins", sans-serif; /* Define a fonte padrão para todos os elementos como "Poppins", com uma fonte sans-serif como fallback */
 }
 
-body{
-    color: #353535;
-    background-color: white;
+body {
+    color: #353535; /* Define a cor do texto dentro do body */
+    background-color: white; /* Define a cor de fundo do body como branca */
 }
 
+/* Importa outros arquivos de estilo */
 @import
-    "layouts/header",
-    "layouts/banner",
-    "layouts/click-to-top";
+    "layouts/header", /* Importa estilos do arquivo "header" localizado na pasta "layouts" */
+    "layouts/banner", /* Importa estilos do arquivo "banner" localizado na pasta "layouts" */
+    "layouts/click-to-top"; /* Importa estilos do arquivo "click-to-top" localizado na pasta "layouts" */

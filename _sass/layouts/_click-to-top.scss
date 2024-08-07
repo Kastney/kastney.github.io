@@ -1,34 +1,34 @@
-.click-to-top{
-    display: flex;
-    z-index: 3;
-    width: 64px;
-    height: 64px;
-    border-radius: 32px;
-    background: white;
-    box-shadow: 0 0 5px #00000060;
-    position: fixed;
-    right: 60px;
-    bottom: 48px;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    transition: .3s;
-    cursor: pointer;
+.click-to-top {
+    display: flex; /* Usa flexbox para alinhar o conteúdo */
+    z-index: 3; /* Garante que o botão esteja acima de outros elementos */
+    width: 64px; /* Define a largura do botão */
+    height: 64px; /* Define a altura do botão */
+    border-radius: 32px; /* Define as bordas arredondadas do botão */
+    background: white; /* Define a cor de fundo do botão */
+    box-shadow: 0 0 5px #00000060; /* Adiciona uma sombra ao botão */
+    position: fixed; /* Fixa a posição do botão na tela */
+    right: 60px; /* Define a posição do botão à direita */
+    bottom: 48px; /* Define a posição do botão na parte inferior */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    font-size: 24px; /* Define o tamanho da fonte do ícone */
+    transition: .3s; /* Adiciona uma transição suave de 0.3 segundos */
+    cursor: pointer; /* Muda o cursor para ponteiro ao passar sobre o botão */
     user-select: none; /* Desativa a seleção de texto */
     -webkit-user-select: none; /* Desativa a seleção de texto no Safari */
     -moz-user-select: none; /* Desativa a seleção de texto no Firefox */
     -ms-user-select: none; /* Desativa a seleção de texto no IE e Edge */
 
-    i{
-        transition: .3s;
+    i {
+        transition: .3s; /* Adiciona uma transição suave de 0.3 segundos ao ícone */
     }
 }
 
 html[scroll-status='top'] .click-to-top {
-    background-color: transparent;
-    visibility: hidden;
+    background-color: transparent; /* Torna o fundo do botão transparente */
+    visibility: hidden; /* Torna o botão invisível */
 
-    i{
-        color: transparent;
+    i {
+        color: transparent; /* Torna o ícone transparente */
     }
 }
