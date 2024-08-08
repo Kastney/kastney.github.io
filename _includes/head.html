@@ -3,8 +3,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Favicon -->
+  {%- if site.favicon != null -%}
   <link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon">
-  
+  {%- endif -%}
+
   <!-- Styles -->
   {%- include head/styles.html -%}
 
