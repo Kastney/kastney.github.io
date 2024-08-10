@@ -3,11 +3,13 @@
         {%- if page.banner.video -%}
             Banner com vídeo
         {%- else if page.banner.image -%}
-            <img src="{{page.banner.image}}" alt="Banner" oncontextmenu="return false;"/>
+            <img class="bg-img" src="{{page.banner.image}}" alt="Banner" oncontextmenu="return false;"/>
             <div class="content">
                 <h1 class="unselectable">{{ page.banner.title | default: page.title | escape }}</h1>
                 {%- if page.subtitle -%}
-                <p class="unselectable">{{ page.subtitle | escape }}</p>
+                    <p class="unselectable">{{ page.subtitle }}</p>
+                {%- elsif page.subtitles -%}
+                    <img class="unselectable" src="https://readme-typing-svg.herokuapp.com?center=true&vCenter=true&height=40&random=true&color=FFFFFF&duration=3000&pause=3000&lines={{ page.subtitles | join: ";" | replace: " ", "+" }}">
                 {%- endif -%}
             </div>
             <div id="click-to-more" class="click-to-more unselectable">

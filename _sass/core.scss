@@ -13,7 +13,7 @@ body {
     background-color: white; /* Define a cor de fundo do body como branca */
 }
 
-.unselectable{
+.unselectable {
     user-select: none; /* Desativa a seleção de texto dentro do botão */
     -webkit-user-select: none; /* Desativa a seleção de texto no Safari */
     -moz-user-select: none; /* Desativa a seleção de texto no Firefox */

@@ -4,28 +4,7 @@
     height: 100vh; /* Define a altura da seção para 100% da altura da tela */
     transition: .3s; /* Adiciona uma transição suave de 0.3 segundos para mudanças de estilo */
 
-    .content {
-        position: relative; /* Define a posição relativa para que o z-index funcione corretamente */
-        z-index: 2; /* Garante que o conteúdo esteja acima da imagem de fundo */
-        display: flex; /* Usa flexbox para o layout */
-        flex-direction: column; /* Alinha os itens em coluna */
-        justify-content: center; /* Centraliza os itens verticalmente */
-        align-items: center; /* Centraliza os itens horizontalmente */
-        height: 100%; /* Ocupa 100% da altura da seção */
-        margin: 0 30px; /* Adiciona margem horizontal de 30 pixels */
-        text-align: center; /* Centraliza o texto dentro da `.content` */
-        
-        h1 {
-            font-size: 2em; /* Define o tamanho da fonte para o título */
-            font-weight: 400; /* Define a espessura da fonte para o título */
-        }
-        
-        p {
-            font-size: 1.25em; /* Define o tamanho da fonte para o parágrafo */
-        }
-    }
-    
-    img {
+    .bg-img {
         position: absolute; /* Posiciona a imagem de forma absoluta em relação à `.banner` */
         z-index: 1; /* Garante que a imagem fique abaixo do conteúdo */
         top: 0; /* Posiciona a imagem no topo da seção */
@@ -39,6 +18,33 @@
         -webkit-user-drag: none; /* Desativa a possibilidade de arrastar a imagem no Safari */
     }
 
+    .content {
+        position: relative; /* Define a posição relativa para que o z-index funcione corretamente */
+        z-index: 2; /* Garante que o conteúdo esteja acima da imagem de fundo */
+        display: flex; /* Usa flexbox para o layout */
+        flex-direction: column; /* Alinha os itens em coluna */
+        justify-content: center; /* Centraliza os itens verticalmente */
+        align-items: center; /* Centraliza os itens horizontalmente */
+        height: 100%; /* Ocupa 100% da altura da seção */
+        margin: 0 30px; /* Adiciona margem horizontal de 30 pixels */
+        text-align: center; /* Centraliza o texto dentro da `.content` */
+        
+        h1 {
+            font-size: 2em; /* Define o tamanho da fonte para o título */
+            font-weight: 500; /* Define a espessura da fonte para o título */
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        img {
+            height: 40px; /* Define o tamanho da imagem animada do subtítulo */
+            user-drag: none; /* Desativa a possibilidade de arrastar a imagem */
+            -webkit-user-drag: none; /* Desativa a possibilidade de arrastar a imagem no Safari */
+        }
+    }
+
     .click-to-more {
         display: flex; /* Usa flexbox para o layout */
         flex-direction: column; /* Alinha os itens em coluna */
@@ -48,7 +54,7 @@
         right: 50%; /* Posiciona o botão à direita do centro da tela */
         bottom: 5px; /* Posiciona o botão 5 pixels acima da borda inferior da tela */
         cursor: pointer; /* Define o cursor como ponteiro ao passar sobre o botão */
-        animation: bounce 2s infinite; /* Aplica a animação de pulo */
+        animation: bounce 1.5s infinite; /* Aplica a animação de pulo */
         
         span, i {
             color: white; /* Define a cor do texto e do ícone dentro do botão como branco */
@@ -59,7 +65,7 @@
 
 html:not([scroll-status='top']) {
     .banner {
-        height: 65vh; /* Reduz a altura da seção quando o scroll não está no topo */
+        height: 55vh; /* Reduz a altura da seção quando o scroll não está no topo */
     }
 
     .click-to-more {
