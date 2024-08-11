@@ -11,11 +11,12 @@ banner:
 ---
 
 ## Em contrução …
-    "📰 Crio Conteúdos de Tecnologia",
-    "☁️ Estudo Computação em Nuvem",
-    "🪐 Sou entusiasta de Astronomia",
-    "🐶 Sou amante de Animais 😺",
-    "🕹️ Sou um fã de games",
-    "🎸 Sou aficionado por Músicas",
-    "🏎️ Sou um fã de Fórmula 1"
+
+📰 Crio Conteúdos de Tecnologia
+☁️ Estudo Computação em Nuvem
+🪐 Sou entusiasta de Astronomia
+🐶 Sou amante de Animais 😺
+🕹️ Sou um fã de games
+🎸 Sou aficionado por Músicas
+🏎️ Sou um fã de Fórmula 1
 Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve
