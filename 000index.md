@@ -1,21 +1,20 @@
 ---
 layout: default
-title: "Início"
+title: page.index.title
 subtitles: [
-    "Sou Engenheiro de Software",
-    "Sou Criador de Conteúdo Tech",
-    "Estudo Computação em Nuvem",
-    "Sou Fascinado em Astronomia",
-    "Sou Amante de Animais",
-    "Sou Apaixonado por Músicas",
-    "Sou Aficionado por Games",
-    "Sou Fã de Automobilismo" ]
+    page.index.subtitles.one,
+    page.index.subtitles.two,
+    page.index.subtitles.three,
+    page.index.subtitles.four,
+    page.index.subtitles.five,
+    page.index.subtitles.six,
+    page.index.subtitles.seven,
+    page.index.subtitles.eight
+]
 permalink: "/"
 banner:
     title: "Kastney"
     image: "/assets/banner/banner.jpg"
 ---
 
-## Em contrução …
-
-Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve ... Site será lançado em breve
+{% translate_file index.md %}

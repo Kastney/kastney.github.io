@@ -5,7 +5,8 @@ title: "kastney"
 favicon: "/assets/images/favicon.ico"
 
 # Language settings
-lang: "pt-br"
+languages: [ "pt", "en" ]
+exclude_from_localizations: [ "assets" ]
 
 # Markdown settings
 kramdown:
@@ -13,21 +14,22 @@ kramdown:
 
 # Optimization settings
 compress_html:
-#  clippings: all
+  clippings: all
   comments: ["<!-- ", " -->"]
-#  endings: all
-#  blanklines: true
-#  profile: false
-#  startings: [html, head, body]
+  endings: all
+  blanklines: true
+  profile: false
+  startings: [html, head, body]
 sass:
   style: compressed
   
 # Plugins settings
 plugins:
-  - jekyll-timeago
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-spaceship
-  - jekyll-paginate-v2
-  - jekyll-scholar
+  - jekyll-multiple-languages-plugin
+  #- jekyll-timeago      #*
+  #- jekyll-feed         #*
+  #- jekyll-seo-tag      #*
+  #- jekyll-sitemap      #*
+  #- jekyll-spaceship    #*
+  #- jekyll-paginate-v2  #*
+  #- jekyll-scholar      #*

@@ -3,7 +3,7 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang }}">
+<html lang="{% translate core.full-lang %}">
   {%- include head.html -%}
   <body>
     {%- include views/header.html -%}

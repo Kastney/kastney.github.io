@@ -1,0 +1,17 @@
+core:
+  full-lang: "pt-br"
+  lang: "pt"
+banner:
+  click-to-more: "Desça para saber mais"
+page:
+  index:
+    title: "Início "
+    subtitles:
+      one: "Sou Engenheiro de Software"
+      two: "Sou Criador de Conteúdo Tech"
+      three: "Estudo Computação em Nuvem"
+      four: "Sou Fascinado em Astronomia"
+      five: "Sou Amante de Animais"
+      six: "Sou Apaixonado por Músicas"
+      seven: "Sou Aficionado por Games"
+      eight: "Sou Fã de Automobilismo"

@@ -1,0 +1,17 @@
+core:
+  full-lang: "en-us"
+  lang: "en"
+banner:
+  click-to-more: "Scroll down to know more"
+page:
+  index:
+    title: "Home "
+    subtitles:
+      one: "I'm a Software Engineer"
+      two: "I'm a Tech Content Creator"
+      three: "I'm Studying Cloud Computing"
+      four: "I'm Fascinated by Astronomy"
+      five: "I'm an Animal Lover"
+      six: "I'm Passionate About Music"
+      seven: "I'm a Gaming Enthusiast"
+      eight: "I'm a Fan of Motorsport"

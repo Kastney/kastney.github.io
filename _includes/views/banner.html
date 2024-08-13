@@ -3,17 +3,28 @@
         {%- if page.banner.video -%}
             Banner com vídeo
         {%- else if page.banner.image -%}
-            <img class="bg-img" src="{{page.banner.image}}" alt="Banner" oncontextmenu="return false;"/>
+            <img class="bg-img" src="{{ page.banner.image }}" alt="Banner" oncontextmenu="return false;"/>
             <div class="content">
                 <h1 class="unselectable">{{ page.banner.title | default: page.title | escape }}</h1>
                 {%- if page.subtitle -%}
                     <p class="unselectable">{{ page.subtitle }}</p>
                 {%- elsif page.subtitles -%}
-                    <img class="unselectable" src="https://readme-typing-svg.herokuapp.com?center=true&vCenter=true&height=40&random=true&color=FFFFFF&duration=2500&pause=4000&lines={{ page.subtitles | join: ";" | replace: " ", "+" }}">
+                    {%- assign result = "" -%}
+                    {%- for subtitle in page.subtitles -%}
+                        {%- capture translated_subtitle -%}
+                            {%- translate subtitle -%}
+                        {%- endcapture -%}
+                        {%- assign result = result | append: translated_subtitle -%}
+                        {%- if forloop.last == false -%}
+                            {%- assign result = result | append: ";" -%}
+                        {%- endif -%}
+                    {%- endfor -%}
+                    {%- assign result = result | replace: " ", "+" -%}
+                    <img class="unselectable" src="https://readme-typing-svg.herokuapp.com?center=true&vCenter=true&height=40&random=true&color=FFFFFF&duration=2500&pause=4000&lines={{ result }}">
                 {%- endif -%}
             </div>
             <div id="click-to-more" class="click-to-more unselectable">
-                <span>Desça para saber mais</span>
+                <span>{%- translate banner.click-to-more -%}</span>
                 <i class="fa fa-arrow-down"></i>
             </div>
         {%- endif -%}

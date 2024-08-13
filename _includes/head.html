@@ -13,7 +13,7 @@
   <!-- Title -->
   <title>
     {%- if page.title != null -%}
-    {{ page.title }} | {{ site.title }}
+    {%- translate page.title -%} | {{ site.title }}
     {%- else -%}
     {{ site.title }}
     {%- endif -%}
