@@ -2,19 +2,33 @@
     <div>
         <!-- Title -->
         <section>
-            <a target="_self" rel="author" href="{{ "/" | relative_url }}">{{ site.title }}</a>
+            {%- if site.lang == site.languages.first -%}
+                <a target="_self" rel="author" href="{{ "/" | relative_url }}">{{ site.title }}</a>
+            {%- else -%}
+                <a target="_self" rel="author" href="/{{ site.lang }}/">{{ site.title }}</a>
+            {%- endif -%}
         </section>
 
         <!-- Menu Items -->
-        {%- assign items = site.pages -%}      
+        {%- assign items = site.pages -%}
         {%- if items != null -%}
         <section class="header-menu">
             <nav>
                 <ul>
                     {%- for item in items -%}
-                    {%- if item.menu-enabled == true -%}
-                    <li><a target="_self" href="{{ item.permalink | relative_url }}">{{ item.title | upcase | escape }}</a></li>
-                    {%- endif -%}
+                        {%- if item.menu_enabled == true -%}
+                            {%- assign href = "" -%}
+                            {%- if site.lang != site.languages.first -%}
+                                {%- assign href = "/" | append: site.lang -%}
+                                {%- assign href = href | append: item.url -%}
+                            {%- else -%}
+                                {%- assign href = href | append: item.url -%}
+                            {%- endif -%}
+                            {%- capture item_text -%}
+                                {%- translate item.title -%}
+                            {%- endcapture -%}
+                            <li><a target="_self" href="{{ href }}">{{ item_text | upcase | escape }}</a></li>
+                        {%- endif -%}
                     {%- endfor -%}
                 </ul>
             </nav>

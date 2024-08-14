@@ -26,10 +26,10 @@ sass:
 # Plugins settings
 plugins:
   - jekyll-multiple-languages-plugin
-  #- jekyll-timeago      #*
-  #- jekyll-feed         #*
-  #- jekyll-seo-tag      #*
-  #- jekyll-sitemap      #*
-  #- jekyll-spaceship    #*
-  #- jekyll-paginate-v2  #*
-  #- jekyll-scholar      #*
+  #- jekyll-timeago
+  #- jekyll-feed
+  #- jekyll-seo-tag
+  #- jekyll-sitemap
+  #- jekyll-spaceship
+  #- jekyll-paginate-v2
+  #- jekyll-scholar

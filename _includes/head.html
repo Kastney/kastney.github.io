@@ -13,9 +13,12 @@
   <!-- Title -->
   <title>
     {%- if page.title != null -%}
-    {%- translate page.title -%} | {{ site.title }}
+      {%- capture page_title -%}
+        {%- translate page.title -%}
+      {%- endcapture -%}
+      {{ page_title }} | {{ site.title }}
     {%- else -%}
-    {{ site.title }}
+      {{ site.title }}
     {%- endif -%}
   </title>
 

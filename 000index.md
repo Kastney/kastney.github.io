@@ -13,7 +13,7 @@ subtitles: [
 ]
 permalink: "/"
 banner:
-    title: "Kastney"
+    title: core.name
     image: "/assets/banner/banner.jpg"
 ---
 

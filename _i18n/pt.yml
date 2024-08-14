@@ -1,11 +1,11 @@
 core:
+  name: "kastney"
   full-lang: "pt-br"
-  lang: "pt"
 banner:
   click-to-more: "Desça para saber mais"
 page:
   index:
-    title: "Início "
+    title: "Início"
     subtitles:
       one: "Sou Engenheiro de Software"
       two: "Sou Criador de Conteúdo Tech"
@@ -15,3 +15,8 @@ page:
       six: "Sou Apaixonado por Músicas"
       seven: "Sou Aficionado por Games"
       eight: "Sou Fã de Automobilismo"
+  games:
+    title: "Jogos"
+    banner:
+      title: "Meus Jogos"
+    subtitle: "Meu portfólio de Jogos Digitais"
