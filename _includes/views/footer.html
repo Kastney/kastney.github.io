@@ -1,0 +1,8 @@
+<footer>
+    {%- assign current_year = 'now' | date: "%Y" -%}
+    {%- capture core_copyright -%}
+        {%- translate core.copyright -%}
+    {%- endcapture -%}
+    {%- assign copyright = core_copyright | replace: "$current_year", current_year | replace: "(c)", "&copy;" -%}
+    <p>{{ copyright }}</p>
+</footer>

@@ -1,6 +1,7 @@
 core:
   name: "kastney"
   full-lang: "pt-br"
+  copyright: "(c) $current_year Kastney. Todos os direitos reservados"
 banner:
   click-to-more: "Desça para saber mais"
 page:

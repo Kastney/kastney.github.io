@@ -3,36 +3,36 @@
         <!-- Title -->
         <section>
             {%- if site.lang == site.languages.first -%}
-                <a target="_self" rel="author" href="{{ "/" | relative_url }}">{{ site.title }}</a>
+                <a target="_self" rel="author" href="{{ "/" | relative_url }}">{%- translate core.name -%}</a>
             {%- else -%}
-                <a target="_self" rel="author" href="/{{ site.lang }}/">{{ site.title }}</a>
+                <a target="_self" rel="author" href="/{{ site.lang }}/">{%- translate core.name -%}</a>
             {%- endif -%}
         </section>
 
         <!-- Menu Items -->
         {%- assign items = site.pages -%}
         {%- if items != null -%}
-        <section class="header-menu">
-            <nav>
-                <ul>
-                    {%- for item in items -%}
-                        {%- if item.menu_enabled == true -%}
-                            {%- assign href = "" -%}
-                            {%- if site.lang != site.languages.first -%}
-                                {%- assign href = "/" | append: site.lang -%}
-                                {%- assign href = href | append: item.url -%}
-                            {%- else -%}
-                                {%- assign href = href | append: item.url -%}
+            <section class="header-menu">
+                <nav>
+                    <ul>
+                        {%- for item in items -%}
+                            {%- if item.menu_enabled == true -%}
+                                {%- assign href = "" -%}
+                                {%- if site.lang != site.languages.first -%}
+                                    {%- assign href = "/" | append: site.lang -%}
+                                    {%- assign href = href | append: item.url -%}
+                                {%- else -%}
+                                    {%- assign href = href | append: item.url -%}
+                                {%- endif -%}
+                                {%- capture item_text -%}
+                                    {%- translate item.title -%}
+                                {%- endcapture -%}
+                                <li><a target="_self" href="{{ href }}">{{ item_text | upcase | escape }}</a></li>
                             {%- endif -%}
-                            {%- capture item_text -%}
-                                {%- translate item.title -%}
-                            {%- endcapture -%}
-                            <li><a target="_self" href="{{ href }}">{{ item_text | upcase | escape }}</a></li>
-                        {%- endif -%}
-                    {%- endfor -%}
-                </ul>
-            </nav>
-        </section>
+                        {%- endfor -%}
+                    </ul>
+                </nav>
+            </section>
         {%- endif -%}
     </div>
 </header>

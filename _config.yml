@@ -1,7 +1,6 @@
 # bundle exec jekyll serve --livereload
 
 # General settings
-title: "kastney"
 favicon: "/assets/images/favicon.ico"
 
 # Language settings

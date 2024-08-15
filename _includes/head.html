@@ -12,13 +12,16 @@
 
   <!-- Title -->
   <title>
+    {%- capture site_title -%}
+      {%- translate core.name -%}
+    {%- endcapture -%}
     {%- if page.title != null -%}
       {%- capture page_title -%}
         {%- translate page.title -%}
       {%- endcapture -%}
-      {{ page_title }} | {{ site.title }}
+      {{ page_title }} | {{ site_title }}
     {%- else -%}
-      {{ site.title }}
+      {{ site_title }}
     {%- endif -%}
   </title>
 

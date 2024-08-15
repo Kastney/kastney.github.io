@@ -10,14 +10,15 @@ layout: compress
     {%- include views/banner.html -%}
     {%- include views/click_to_top.html -%}
     <section>
-    {{ content }}
+      {{ content }}
     </section>
+    {%- include views/footer.html -%}
     <script >
-    {%- include scripts/core.js -%}
-    {%- include scripts/scroll-status.js -%}
-    {%- include scripts/click-to-top.js -%}
-    {%- include scripts/click-to-more.js -%}
-    {%- include scripts/contextmenu-disabled.js -%}
+      {%- include scripts/core.js -%}
+      {%- include scripts/scroll-status.js -%}
+      {%- include scripts/click-to-top.js -%}
+      {%- include scripts/click-to-more.js -%}
+      {%- include scripts/contextmenu-disabled.js -%}
     </script>
   </body>
 </html>
