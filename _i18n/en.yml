@@ -2,8 +2,11 @@ core:
   name: "kastney"
   lang: "en-us"
   copyright: "(c) $current_year Kastney. All rights reserved"
+countries:
+  pt-br: "Brazil"
+  en-us: "United States"
 banner:
-  click-to-more: "Scroll down to know more"
+  click_to_more: "Scroll down to know more"
 page:
   index:
     title: "Home"

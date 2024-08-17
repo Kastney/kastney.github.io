@@ -1,5 +1,14 @@
 <footer>
-    {% translate core.lang %}
+    <ul>
+        {%- for lang in site.languages -%}
+            {%- assign site_lang = site.translations[lang].core.lang -%}
+            <li>
+                {{ site.translations[site.lang].countries[site_lang] }}
+            </li>
+        {%- endfor -%}
+    </ul>
+    
+    <!-- ------------------------------------------------ -->
 
     {%- assign current_year = 'now' | date: "%Y" -%}
     {%- capture core_copyright -%}

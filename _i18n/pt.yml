@@ -2,8 +2,11 @@ core:
   name: "kastney"
   lang: "pt-br"
   copyright: "(c) $current_year Kastney. Todos os direitos reservados"
+countries:
+  pt-br: "Brasil"
+  en-us: "Estados Unidos"
 banner:
-  click-to-more: "Desça para saber mais"
+  click_to_more: "Desça para saber mais"
 page:
   index:
     title: "Início"
