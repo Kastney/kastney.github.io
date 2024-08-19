@@ -1,12 +1,12 @@
 <footer>
-    <ul>
+    <section>
         {%- for lang in site.languages -%}
             {%- assign site_lang = site.translations[lang].core.lang -%}
-            <li>
+            <option value="">
                 {{ site.translations[site.lang].countries[site_lang] }}
-            </li>
+            </option>
         {%- endfor -%}
-    </ul>
+    </section>
     
     {%- assign current_year = 'now' | date: "%Y" -%}
     {%- capture core_copyright -%}
