@@ -4,7 +4,7 @@
 favicon: "/assets/images/favicon.ico"
 
 # Language settings
-languages: [ "pt", "en" ]
+languages: [ "br", "us" ]
 exclude_from_localizations: [ "assets" ]
 
 # Markdown settings
