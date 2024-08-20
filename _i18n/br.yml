@@ -3,8 +3,8 @@ core:
   lang: "pt-br"
   copyright: "(c) $current_year Kastney. Todos os direitos reservados"
 countries:
-  pt_br: "Brasil"
-  en_us: "Estados Unidos"
+  br: "Brasil"
+  us: "Estados Unidos"
 banner:
   click_to_more: "Desça para saber mais"
 page:

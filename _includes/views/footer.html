@@ -1,14 +1,22 @@
 <footer>
+    {%- capture countries -%}
+        {%- translate countries -%}
+    {%- endcapture -%}
+    {%- assign countries_hash = countries | strip_newlines | replace: "=>", ":" | replace: "{", "" | replace: "}", "" | split: "," %}
     <ul>
-        {%- for lang in site.languages -%}
-            {%- assign site_lang = site.translations[lang].core.lang -%}
+        {% for country in countries_hash %}
+            {%- assign country_pair = country | split: ":" %}
+            {%- assign country_key = country_pair[0] | strip | remove: '"' %}
+            {%- assign country_name = country_pair[1] | strip | remove: '"' %}
             <li>
-                {%- assign aux_site_lang = site_lang | replace: "-", "_" -%}
-                {{ site.translations[site.lang].countries[aux_site_lang] }}
+                <span class="fi fi-{{country_key}}"></span>
+                {{ country_name }}
             </li>
-        {%- endfor -%}
+        {% endfor %}
     </ul>
     
+    <hr>
+
     {%- assign current_year = 'now' | date: "%Y" -%}
     {%- capture core_copyright -%}
         {%- translate core.copyright -%}
