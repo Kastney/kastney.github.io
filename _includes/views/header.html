@@ -24,10 +24,18 @@
                                 {%- else -%}
                                     {%- assign href = href | append: item.url -%}
                                 {%- endif -%}
-                                {%- capture item_text -%}
-                                    {%- translate item.title -%}
-                                {%- endcapture -%}
-                                <li><a target="_self" href="{{ href }}">{{ item_text | upcase | escape }}</a></li>
+                                
+                                {%- if item.title_header != null -%}
+                                    {%- capture item_text -%}
+                                        {%- translate item.title_header -%}
+                                    {%- endcapture -%}
+                                    <li><a target="_self" href="{{ href }}">{{ item_text | upcase | escape }}</a></li>
+                                {%- else -%}
+                                    {%- capture item_text -%}
+                                        {%- translate item.title -%}
+                                    {%- endcapture -%}
+                                    <li><a target="_self" href="{{ href }}">{{ item_text | upcase | escape }}</a></li>
+                                {%- endif -%}
                             {%- endif -%}
                         {%- endfor -%}
                     </ul>

@@ -12,6 +12,7 @@ subtitles: [
     page.index.subtitles.eight
 ]
 permalink: "/"
+menu_enabled: false
 banner:
     title: core.name
     image: "/assets/banner/banner.jpg"

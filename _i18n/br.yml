@@ -24,3 +24,9 @@ page:
     banner:
       title: "Meus Jogos"
     subtitle: "Meu portfólio de Jogos Digitais"
+  investigation:
+    title: "Investigação Digital"
+    title_header: "Investigação"
+    banner:
+      title: "Investigação Digital"
+    subtitle: "Contrate serviços de Investigação Digital"
