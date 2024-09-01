@@ -19,6 +19,7 @@
 
         span {
             margin-right: 10px; /* Adiciona 10px de margem à direita do span (bandeira) */
+            box-shadow: 0px 0px 1px black;
         }
 
         .fi {
@@ -43,25 +44,27 @@
         width: calc(100% - 10px); /* Define a largura do conteúdo do dropdown, reduzida em 10px das bordas */
         margin: 0 5px; /* Adiciona 5px de margem à esquerda e à direita do conteúdo do dropdown */
 
-        a {
-            padding: 10px 0; /* Adiciona 10px de preenchimento vertical dentro dos links */
-            text-decoration: none; /* Remove a decoração padrão de sublinhado dos links */
-            display: flex; /* Usa Flexbox para alinhar itens dentro dos links */
-            align-items: center; /* Alinha os itens no centro verticalmente dentro dos links */
-            font-size: 16px; /* Define o tamanho da fonte para 16px dentro dos links */
+        a, .current-language {
+            padding: 10px 0;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
             color: #353535;
+            cursor: pointer;
 
             span {
-                margin-right: 10px; /* Adiciona 10px de margem à direita do span (bandeira) dentro dos links */
+                margin-right: 10px;
+                box-shadow: 0px 0px 1px black;
             }
 
             .fi {
-                margin-left: 16px; /* Adiciona 16px de margem à esquerda dos ícones de bandeira dentro dos links */
+                margin-left: 16px;
             }
         }
 
-        a:hover {
-            background-color: #f1f1f1; /* Muda a cor de fundo dos links quando o cursor passa sobre eles */
+        a:hover, .current-language:hover {
+            background-color: #f1f1f1;
         }
     }
 }

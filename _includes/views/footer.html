@@ -1,45 +1,54 @@
 <footer>
-    
     <div class="language">
-        <p>
-            {%- translate footer.experience -%}
-        </p>
+        <p>{%- translate footer.experience -%}</p>
+
+        {%- capture countries -%}
+            {%- translate countries -%}
+        {%- endcapture -%}
+
         <div class="dropdown">
+            {%- assign countries_hash = countries | strip_newlines | replace: "=>", ":" | replace: "{", "" | replace: "}", "" | split: "," %}
+            {%- assign current_country_name = "" %}
+
+            {% for country in countries_hash %}
+                {%- assign country_pair = country | split: ":" %}
+                {%- assign country_key = country_pair[0] | strip | remove: '"' %}
+                {%- assign country_name = country_pair[1] | strip | remove: '"' %}
+
+                {%- if country_key == site.lang %}
+                    {%- assign current_country_name = country_name %}
+                {%- endif %}
+            {% endfor %}
+
             <button class="dropdown-button">
-                <span class="fi fi-br"></span> Brasil
+                <span class="fi fi-{{site.lang}}"></span>{{current_country_name}}
                 <i class="fa fa-chevron-down"></i>
             </button>
+
             <div class="dropdown-content">
-                <a href="#"><span class="fi fi-br"></span> Brasil</a>
-                <a href="#"><span class="fi fi-us"></span> Estados Unidos</a>
-                <a href="#"><span class="fi fi-fr"></span> França</a>
-                <a href="#"><span class="fi fi-de"></span> Alemanha</a>
-                <a href="#"><span class="fi fi-jp"></span> Japão</a>
-                <a href="#"><span class="fi fi-it"></span> Itália</a>
-                <a href="#"><span class="fi fi-ca"></span> Canadá</a>
-                <a href="#"><span class="fi fi-au"></span> Austrália</a>
-                <a href="#"><span class="fi fi-ru"></span> Rússia</a>
-                <a href="#"><span class="fi fi-in"></span> Índia</a>
+                {% for country in countries_hash %}
+                    {%- assign country_pair = country | split: ":" %}
+                    {%- assign country_key = country_pair[0] | strip | remove: '"' %}
+                    {%- assign country_name = country_pair[1] | strip | remove: '"' %}
+
+                    {%- if country_key != site.lang %}
+                        {%- assign href = "" -%}
+                        {%- if country_key != site.languages.first -%}
+                            {%- assign permalink = "permalink_" | append: country_key -%}
+                            {%- assign href = "/" | append: country_key | append: page[permalink] -%}
+                        {%- else -%}
+                            {%- assign permalink = "permalink" -%}
+                            {%- assign href = page[permalink] -%}
+                        {%- endif -%}
+                        <a target="_self" rel="alternate" href="{{href}}"><span class="fi fi-{{country_key}}"></span>{{country_name}}</a>
+                    {%- else %}
+                        <span class="current-language"><span class="fi fi-{{country_key}}"></span>{{country_name}}</span>
+                    {%- endif %}
+                {% endfor %}
             </div>
         </div>
     </div>
-    
-    {%- capture countries -%}
-        {%- translate countries -%}
-    {%- endcapture -%}
-    {%- assign countries_hash = countries | strip_newlines | replace: "=>", ":" | replace: "{", "" | replace: "}", "" | split: "," %}
-    <ul>
-        {% for country in countries_hash %}
-            {%- assign country_pair = country | split: ":" %}
-            {%- assign country_key = country_pair[0] | strip | remove: '"' %}
-            {%- assign country_name = country_pair[1] | strip | remove: '"' %}
-            <li>
-                <span class="fi fi-{{country_key}}"></span>
-                {{ country_name }}
-            </li>
-        {% endfor %}
-    </ul>
-    
+
     <hr>
 
     {%- assign current_year = 'now' | date: "%Y" -%}
