@@ -1,5 +1,28 @@
 <footer>
-    <hr>
+    
+    <div class="language">
+        <p>
+            {%- translate footer.experience -%}
+        </p>
+        <div class="dropdown">
+            <button class="dropdown-button">
+                <span class="fi fi-br"></span> Brasil
+                <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#"><span class="fi fi-br"></span> Brasil</a>
+                <a href="#"><span class="fi fi-us"></span> Estados Unidos</a>
+                <a href="#"><span class="fi fi-fr"></span> França</a>
+                <a href="#"><span class="fi fi-de"></span> Alemanha</a>
+                <a href="#"><span class="fi fi-jp"></span> Japão</a>
+                <a href="#"><span class="fi fi-it"></span> Itália</a>
+                <a href="#"><span class="fi fi-ca"></span> Canadá</a>
+                <a href="#"><span class="fi fi-au"></span> Austrália</a>
+                <a href="#"><span class="fi fi-ru"></span> Rússia</a>
+                <a href="#"><span class="fi fi-in"></span> Índia</a>
+            </div>
+        </div>
+    </div>
     
     {%- capture countries -%}
         {%- translate countries -%}
@@ -24,5 +47,5 @@
         {%- translate core.copyright -%}
     {%- endcapture -%}
     {%- assign copyright = core_copyright | replace: "$current_year", current_year | replace: "(c)", "&copy;" -%}
-    <p>{{ copyright }}</p>
+    <p class="copyright">{{ copyright }}</p>
 </footer>

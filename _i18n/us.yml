@@ -7,6 +7,8 @@ countries:
   us: "United States"
 banner:
   click_to_more: "Scroll down to know more"
+footer:
+  experience: "You are accessing the experience:"
 page:
   index:
     title: "Home"

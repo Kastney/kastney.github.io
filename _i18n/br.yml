@@ -7,6 +7,8 @@ countries:
   us: "Estados Unidos"
 banner:
   click_to_more: "Desça para saber mais"
+footer:
+  experience: "Você está acessando a experiência:"
 page:
   index:
     title: "Início"

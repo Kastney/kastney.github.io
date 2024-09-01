@@ -19,6 +19,7 @@ layout: compress
       {%- include scripts/click-to-top.js -%}
       {%- include scripts/click-to-more.js -%}
       {%- include scripts/contextmenu-disabled.js -%}
+      {%- include scripts/dropdown.js -%}
     </script>
   </body>
 </html>

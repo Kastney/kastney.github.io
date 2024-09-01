@@ -1,7 +1,16 @@
 footer {
     background-color: #eee;
-    
-    p {
+    font-size: 12px;
+
+    .language{
+        padding: 20px;
+
+        p {
+            padding: 0 0 5px 10px;
+        }
+    }
+
+    .copyright {
         padding: 40px 0;
         font-size: 10px;
         text-align: center;

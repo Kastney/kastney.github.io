@@ -1,0 +1,75 @@
+.dropdown {
+    position: relative; /* Posiciona o dropdown relativamente ao seu contêiner pai */
+    width: 100%; /* Define a largura do dropdown para 100% da largura do contêiner pai */
+    margin: 0 auto; /* Centraliza o dropdown horizontalmente */
+
+    .dropdown-button {
+        display: flex; /* Usa Flexbox para alinhar itens dentro do botão */
+        background-color: white; /* Define a cor de fundo do botão como branco */
+        width: 100%; /* Define a largura do botão para 100% do contêiner pai */
+        padding: 10px; /* Adiciona 10px de preenchimento interno em todos os lados do botão */
+        font-size: 16px; /* Define o tamanho da fonte para 16px */
+        box-shadow: 0px 4px 6px rgba(0,0,0,0.1); /* Adiciona uma sombra sutil ao botão */
+        border: 1px solid #ccc; /* Define uma borda de 1px sólida e cinza clara ao redor do botão */
+        border-radius: 8px; /* Adiciona bordas arredondadas com raio de 8px */
+        cursor: pointer; /* Muda o cursor para uma mão quando passa sobre o botão */
+        align-items: center; /* Alinha os itens no centro verticalmente */
+        justify-content: space-between; /* Cria um espaço igual entre a bandeira+texto e a seta */
+        position: relative; /* Define a posição do botão como relativa para posicionar o dropdown */
+
+        span {
+            margin-right: 10px; /* Adiciona 10px de margem à direita do span (bandeira) */
+        }
+
+        .fi {
+            margin-left: 10px; /* Adiciona 10px de margem à esquerda dos ícones de bandeira */
+        }
+
+        i {
+            margin-left: auto; /* Empurra a seta para o extremo direito do botão */
+            transform: rotate(0deg); /* Define a rotação inicial da seta para 0 graus (virada para baixo) */
+            transition: transform 0.3s ease; /* Aplica uma transição suave de 0.3 segundos na rotação da seta */
+        }
+    }
+
+    .dropdown-content {
+        display: none; /* Oculta o conteúdo do dropdown por padrão */
+        position: absolute; /* Posiciona o conteúdo do dropdown absolutamente em relação ao botão */
+        background-color: #f9f9f9; /* Define a cor de fundo do conteúdo do dropdown */
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Adiciona uma sombra ao conteúdo do dropdown */
+        z-index: 2; /* Garante que o conteúdo do dropdown fique acima de outros elementos */
+        max-height: 130px; /* Define uma altura máxima para o dropdown para adicionar rolagem se necessário */
+        overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo exceder a altura máxima */
+        width: calc(100% - 10px); /* Define a largura do conteúdo do dropdown, reduzida em 10px das bordas */
+        margin: 0 5px; /* Adiciona 5px de margem à esquerda e à direita do conteúdo do dropdown */
+
+        a {
+            padding: 10px 0; /* Adiciona 10px de preenchimento vertical dentro dos links */
+            text-decoration: none; /* Remove a decoração padrão de sublinhado dos links */
+            display: flex; /* Usa Flexbox para alinhar itens dentro dos links */
+            align-items: center; /* Alinha os itens no centro verticalmente dentro dos links */
+            font-size: 16px; /* Define o tamanho da fonte para 16px dentro dos links */
+            color: #353535;
+
+            span {
+                margin-right: 10px; /* Adiciona 10px de margem à direita do span (bandeira) dentro dos links */
+            }
+
+            .fi {
+                margin-left: 16px; /* Adiciona 16px de margem à esquerda dos ícones de bandeira dentro dos links */
+            }
+        }
+
+        a:hover {
+            background-color: #f1f1f1; /* Muda a cor de fundo dos links quando o cursor passa sobre eles */
+        }
+    }
+}
+
+.dropdown.active .dropdown-button i {
+    transform: rotate(180deg); /* Gira a seta para cima (180 graus) quando o dropdown está ativo */
+}
+
+.dropdown.active .dropdown-content {
+    display: block; /* Mostra o conteúdo do dropdown quando a classe active é aplicada */
+}
