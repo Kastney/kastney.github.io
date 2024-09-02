@@ -7,11 +7,13 @@ layout: compress
   {%- include head.html -%}
   <body>
     {%- include views/header.html -%}
-    {%- include views/banner.html -%}
-    {%- include views/click_to_top.html -%}
-    <section>
-      {{ content }}
-    </section>
+    <main>
+      {%- include views/banner.html -%}
+      {%- include views/click_to_top.html -%}
+      <section>
+        {{ content }}
+      </section>
+    </main>
     {%- include views/footer.html -%}
     <script >
       {%- include scripts/core.js -%}
