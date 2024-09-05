@@ -21,6 +21,11 @@ page:
       six: "Sou Apaixonado por Músicas"
       seven: "Sou Aficionado por Games"
       eight: "Sou Fã de Automobilismo"
+  blog:
+    title: "Blog"
+    banner:
+      title: "Meu blog"
+    subtitle: "Compartilho coisas que aprendo"
   games:
     title: "Jogos"
     banner:

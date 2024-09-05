@@ -35,6 +35,9 @@
                         {%- assign href = "" -%}
                         {%- if country_key != site.languages.first -%}
                             {%- assign permalink = "permalink_" | append: country_key -%}
+                            {%- if page[permalink] == null -%}
+                                {%- assign permalink = "permalink" -%}
+                            {%- endif -%}
                             {%- assign href = "/" | append: country_key | append: page[permalink] -%}
                         {%- else -%}
                             {%- assign permalink = "permalink" -%}

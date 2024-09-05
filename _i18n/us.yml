@@ -21,6 +21,11 @@ page:
       six: "I'm Passionate About Music"
       seven: "I'm a Gaming Enthusiast"
       eight: "I'm a Fan of Motorsport"
+  blog:
+    title: "Blog"
+    banner:
+      title: "My blog"
+    subtitle: "I share things I learn"
   games:
     title: "Games"
     banner:
