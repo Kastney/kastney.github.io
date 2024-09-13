@@ -43,7 +43,7 @@
                             {%- assign permalink = "permalink" -%}
                             {%- assign href = page[permalink] -%}
                         {%- endif -%}
-                        <a target="_self" rel="alternate" href="{{href}}"><span class="fi fi-{{country_key}}"></span>{{country_name}}</a>
+                        <a target="_self" rel="alternate" hreflang="{{site.translations[country_key].core.lang}}" href="{{href}}"><span class="fi fi-{{country_key}}"></span>{{country_name}}</a>
                     {%- else %}
                         <span class="current-language"><span class="fi fi-{{country_key}}"></span>{{country_name}}</span>
                     {%- endif %}
