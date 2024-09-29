@@ -37,3 +37,8 @@ page:
     banner:
       title: "Digital Investigation"
     subtitle: "Hire Digital Investigation services"
+  certificates:
+    title: "Certificates"
+    banner:
+      title: "My Certificates"
+    subtitle: "All my certificates"

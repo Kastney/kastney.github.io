@@ -37,3 +37,8 @@ page:
     banner:
       title: "Investigação Digital"
     subtitle: "Contrate serviços de Investigação Digital"
+  certificates:
+    title: "Certificados"
+    banner:
+      title: "Meus Certificados"
+    subtitle: "Todos os meus certificados"

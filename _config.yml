@@ -7,6 +7,27 @@ favicon: "/assets/images/favicon.ico"
 languages: [ "br", "us" ]
 exclude_from_localizations: [ "assets" ]
 
+# Collections settings
+collections_dir: _collections
+collections:
+  certificates_br:
+    output: true
+    permalink: /certificados/:name/
+    lang: br
+  certificates_us:
+    output: true
+    permalink: /certificates/:name/
+    lang: us
+
+# Paginate settings
+pagination:
+  enabled: true
+  debug: false
+  permalink: '/:num/'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
 # Markdown settings
 kramdown:
   input: kramdown
@@ -25,10 +46,10 @@ sass:
 # Plugins settings
 plugins:
   - jekyll-multiple-languages-plugin
+  - jekyll-paginate-v2
   #- jekyll-timeago
   #- jekyll-feed
   #- jekyll-seo-tag
   #- jekyll-sitemap
   #- jekyll-spaceship
-  #- jekyll-paginate-v2
   #- jekyll-scholar
