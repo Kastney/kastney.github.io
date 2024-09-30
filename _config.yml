@@ -12,10 +12,8 @@ collections_dir: _collections
 collections:
   certificates_br:
     output: true
-    permalink: "/certificados/:name/"
   certificates_us:
     output: true
-    permalink: "/certificates/:name/"
 
 # Paginate settings
 pagination:
