@@ -1,9 +1,9 @@
 ---
 layout: default
+posters: certificates
 title: page.certificates.title
 title_header: page.certificates.title
 subtitle: page.certificates.subtitle
-posters: certificates
 permalink: "/certificados/"
 permalink_us: "/certificates/"
 menu_enabled: true

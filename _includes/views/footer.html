@@ -26,28 +26,57 @@
             </button>
 
             <div class="dropdown-content">
-                {% for country in countries_hash %}
-                    {%- assign country_pair = country | split: ":" %}
-                    {%- assign country_key = country_pair[0] | strip | remove: '"' %}
-                    {%- assign country_name = country_pair[1] | strip | remove: '"' %}
+                {%- for country in countries_hash -%}
+                    {%- assign country_pair = country | split: ":" -%}
+                    {%- assign country_key = country_pair[0] | strip | remove: '"' -%}
+                    {%- assign country_name = country_pair[1] | strip | remove: '"' -%}
 
-                    {%- if country_key != site.lang %}
-                        {%- assign href = "" -%}
-                        {%- if country_key != site.languages.first -%}
-                            {%- assign permalink = "permalink_" | append: country_key -%}
-                            {%- if page[permalink] == null -%}
+                    {%- assign href = "" -%}
+
+                    {% if page.layout == "certificate" %}
+                        <!-- A página possui o layout certificate -->
+                        {%- if country_key != site.lang -%}
+                            {% assign target_page = nil %}
+                            {% for page in site.pages %}
+                                {% if page.posters == "certificates" %}
+                                    {% assign target_page = page %}
+                                {% endif %}
+                            {% endfor %}
+                            {%- if country_key != site.languages.first -%}
                                 {%- assign permalink = "permalink" -%}
+                                {%- assign poster_permalink_parts = page[permalink] | split: '/' -%}
+                                {%- assign permalink = permalink | append: "_" | append: country_key -%}
+                                {%- assign main_permalink_parts = target_page[permalink] | split: '/' -%}
+                                {%- assign href = "/" | append: country_key | append: "/" | append: main_permalink_parts[1] | append: "/" | append: poster_permalink_parts[2] | append: "/" -%}
+                            {%- else -%}
+                                {%- assign permalink = "permalink" -%}
+                                {%- assign poster_permalink_parts = page[permalink] | split: '/' -%}
+                                {%- assign main_permalink_parts = target_page[permalink] | split: '/' -%}
+                                {%- assign href = "/" | append: main_permalink_parts[1] | append: "/" | append: poster_permalink_parts[2] | append: "/" -%}
                             {%- endif -%}
-                            {%- assign href = "/" | append: country_key | append: page[permalink] -%}
+                            <a target="_self" rel="alternate" hreflang="{{site.translations[country_key].core.lang}}" href="{{href}}"><span class="fi fi-{{country_key}}"></span>{{country_name}}</a>
                         {%- else -%}
-                            {%- assign permalink = "permalink" -%}
-                            {%- assign href = page[permalink] -%}
+                            <span class="current-language"><span class="fi fi-{{country_key}}"></span>{{country_name}}</span>
                         {%- endif -%}
-                        <a target="_self" rel="alternate" hreflang="{{site.translations[country_key].core.lang}}" href="{{href}}"><span class="fi fi-{{country_key}}"></span>{{country_name}}</a>
-                    {%- else %}
-                        <span class="current-language"><span class="fi fi-{{country_key}}"></span>{{country_name}}</span>
-                    {%- endif %}
-                {% endfor %}
+                    {% else %}
+                        <!-- É uma página principal -->
+                        {%- if country_key != site.lang -%}
+                            {%- if country_key != site.languages.first -%}
+                                {%- assign permalink = "permalink_" | append: country_key -%}
+                                {%- if page[permalink] == null -%}
+                                    {%- assign permalink = "permalink" -%}
+                                {%- endif -%}
+                                {%- assign href = "/" | append: country_key | append: page[permalink] -%}
+                            {%- else -%}
+                                {%- assign permalink = "permalink" -%}
+                                {%- assign href = page[permalink] -%}
+                            {%- endif -%}
+                            <a target="_self" rel="alternate" hreflang="{{site.translations[country_key].core.lang}}" href="{{href}}"><span class="fi fi-{{country_key}}"></span>{{country_name}}</a>
+                        {%- else -%}
+                            <span class="current-language"><span class="fi fi-{{country_key}}"></span>{{country_name}}</span>
+                        {%- endif -%}
+                    {% endif %}
+                {%- endfor -%}
             </div>
         </div>
     </div>
