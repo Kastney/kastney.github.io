@@ -33,24 +33,17 @@
 
                     {%- assign href = "" -%}
 
-                    {% if page.layout == "certificate" %}
-                        <!-- A página possui o layout certificate -->
+                    {%- if page.layout == "certificate" -%}
+                        <!-- Certificate Layout -->
                         {%- if country_key != site.lang -%}
-                            {% assign target_page = nil %}
-                            {% for page in site.pages %}
-                                {% if page.posters == "certificates" %}
-                                    {% assign target_page = page %}
-                                {% endif %}
-                            {% endfor %}
+                            {% assign target_page = site.pages | where: "posters", "certificates" | first %}
+                            {%- assign permalink = "permalink" -%}
+                            {%- assign poster_permalink_parts = page[permalink] | split: '/' -%}
                             {%- if country_key != site.languages.first -%}
-                                {%- assign permalink = "permalink" -%}
-                                {%- assign poster_permalink_parts = page[permalink] | split: '/' -%}
                                 {%- assign permalink = permalink | append: "_" | append: country_key -%}
                                 {%- assign main_permalink_parts = target_page[permalink] | split: '/' -%}
                                 {%- assign href = "/" | append: country_key | append: "/" | append: main_permalink_parts[1] | append: "/" | append: poster_permalink_parts[2] | append: "/" -%}
                             {%- else -%}
-                                {%- assign permalink = "permalink" -%}
-                                {%- assign poster_permalink_parts = page[permalink] | split: '/' -%}
                                 {%- assign main_permalink_parts = target_page[permalink] | split: '/' -%}
                                 {%- assign href = "/" | append: main_permalink_parts[1] | append: "/" | append: poster_permalink_parts[2] | append: "/" -%}
                             {%- endif -%}
@@ -59,7 +52,7 @@
                             <span class="current-language"><span class="fi fi-{{country_key}}"></span>{{country_name}}</span>
                         {%- endif -%}
                     {% else %}
-                        <!-- É uma página principal -->
+                        <!-- Defalut Layout -->
                         {%- if country_key != site.lang -%}
                             {%- if country_key != site.languages.first -%}
                                 {%- assign permalink = "permalink_" | append: country_key -%}
