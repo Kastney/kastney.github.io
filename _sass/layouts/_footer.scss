@@ -1,5 +1,5 @@
 footer {
-    background-color: #eee;
+    background-color: $background-color-light;
     font-size: 12px;
 
     .language{
@@ -11,7 +11,7 @@ footer {
     }
 
     .copyright {
-        padding: 40px 0;
+        padding: 60px 0;
         font-size: 10px;
         text-align: center;
     }

@@ -5,12 +5,12 @@
 
     .dropdown-button {
         display: flex; /* Usa Flexbox para alinhar itens dentro do botão */
-        background-color: white; /* Define a cor de fundo do botão como branco */
+        background-color: $card-light; /* Define a cor de fundo do botão como branco */
         width: 100%; /* Define a largura do botão para 100% do contêiner pai */
         padding: 10px; /* Adiciona 10px de preenchimento interno em todos os lados do botão */
         font-size: 16px; /* Define o tamanho da fonte para 16px */
-        box-shadow: 0 0 3px #00000060; /* Adiciona uma sombra sutil ao botão */
-        border: 1px solid #00000030; /* Define uma borda de 1px sólida e cinza clara ao redor do botão */
+        box-shadow: 0 0 1px #00000060; /* Adiciona uma sombra sutil ao botão */
+        border: 1px solid #00000040; /* Define uma borda de 1px sólida e cinza clara ao redor do botão */
         border-radius: 8px; /* Adiciona bordas arredondadas com raio de 8px */
         cursor: pointer; /* Muda o cursor para uma mão quando passa sobre o botão */
         align-items: center; /* Alinha os itens no centro verticalmente */
@@ -35,8 +35,8 @@
     .dropdown-content {
         display: none; /* Oculta o conteúdo do dropdown por padrão */
         position: absolute; /* Posiciona o conteúdo do dropdown absolutamente em relação ao botão */
-        background-color: white; /* Define a cor de fundo do conteúdo do dropdown */
-        box-shadow: 0px 1px 3px #00000060; /* Adiciona uma sombra ao conteúdo do dropdown */
+        background-color: $card-light; /* Define a cor de fundo do conteúdo do dropdown */
+        box-shadow: 0px 1px 1px #00000060; /* Adiciona uma sombra ao conteúdo do dropdown */
         z-index: 2; /* Garante que o conteúdo do dropdown fique acima de outros elementos */
         max-height: 130px; /* Define uma altura máxima para o dropdown para adicionar rolagem se necessário */
         overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo exceder a altura máxima */
@@ -62,7 +62,7 @@
         }
 
         a:hover, .current-language:hover {
-            background-color: #f1f1f1;
+            background-color: $card-hover-light;
         }
     }
 }

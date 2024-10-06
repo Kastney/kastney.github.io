@@ -5,7 +5,7 @@ header {
     top: 0; /* Posiciona o cabeçalho no topo da tela */
     left: 0; /* Posiciona o cabeçalho à esquerda da tela */
     position: fixed; /* Fixa a posição do cabeçalho na tela */
-    background-color: white; /* Define a cor de fundo do cabeçalho */
+    background-color: $card-light; /* Define a cor de fundo do cabeçalho */
     box-shadow: 0 0 5px #00000060; /* Adiciona uma sombra ao cabeçalho */
     transition: .3s; /* Adiciona uma transição suave de 0.3 segundos para mudanças de estilo */
     z-index: 5; /* Garante que o cabeçalho fique acima de outros elementos */

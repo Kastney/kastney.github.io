@@ -4,11 +4,11 @@
     width: 64px; /* Define a largura do botão */
     height: 64px; /* Define a altura do botão */
     border-radius: 32px; /* Define as bordas arredondadas do botão */
-    background: white; /* Define a cor de fundo do botão */
-    box-shadow: 0 0 5px #00000060; /* Adiciona uma sombra ao botão */
+    background: $card-light; /* Define a cor de fundo do botão */
+    box-shadow: 0 0 3px #00000060; /* Adiciona uma sombra ao botão */
     position: fixed; /* Fixa a posição do botão na tela */
     right: 60px; /* Define a posição do botão à direita */
-    bottom: 48px; /* Define a posição do botão na parte inferior */
+    bottom: 35px; /* Define a posição do botão na parte inferior */
     align-items: center; /* Centraliza o conteúdo verticalmente */
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     font-size: 24px; /* Define o tamanho da fonte do ícone */

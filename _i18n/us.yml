@@ -1,7 +1,7 @@
 core:
   name: "kastney"
   lang: "en-us"
-  copyright: "(c) $current_year Kastney. All rights reserved"
+  copyright: "(c) $current_year kastney. All rights reserved"
 countries:
   br: "Brazil"
   us: "United States"

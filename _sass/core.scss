@@ -1,5 +1,9 @@
 @charset "utf-8"; /* Define a codificação de caracteres como UTF-8, que é uma codificação padrão para a maioria dos sites */
 
+$background-color-light: #eeeeee !default;
+$card-light: #ffffff !default;
+$card-hover-light: #f8f8f8 !default;
+
 /* Estilos gerais aplicados a todos os elementos */
 * {
     margin: 0; /* Remove a margem padrão de todos os elementos */
@@ -10,7 +14,7 @@
 
 body {
     color: #353535; /* Define a cor do texto dentro do body */
-    background-color: white; /* Define a cor de fundo do body como branca */
+    background-color: $background-color-light; /* Define a cor de fundo do body como branca */
 }
 
 .unselectable {
