@@ -1,65 +1,81 @@
 /* Header */
 header {
-    padding: 20px; /* Espaçamento interno ao redor do conteúdo do cabeçalho */
-    width: 100%; /* Largura total da tela */
-    top: 0; /* Posiciona o cabeçalho no topo da tela */
-    left: 0; /* Posiciona o cabeçalho à esquerda da tela */
-    position: fixed; /* Fixa a posição do cabeçalho na tela */
-    background-color: $card-light; /* Define a cor de fundo do cabeçalho */
-    box-shadow: 0 0 5px #00000060; /* Adiciona uma sombra ao cabeçalho */
-    transition: .3s; /* Adiciona uma transição suave de 0.3 segundos para mudanças de estilo */
-    z-index: 5; /* Garante que o cabeçalho fique acima de outros elementos */
+    padding: 20px; /* Adiciona preenchimento ao redor do conteúdo do header */
+    width: 100%; /* O header ocupa toda a largura da página */
+    top: 0; /* Fixa o header no topo da página */
+    left: 0; /* Fixa o header no início horizontal da página */
+    position: fixed; /* O header permanece fixo na posição, mesmo com o scroll */
+    background-color: transparent; /* Fundo transparente por padrão */
+    backdrop-filter: none; /* Nenhum efeito de vidro fosco por padrão */
+    box-shadow: none; /* Nenhuma sombra por padrão */
+    opacity: 1; /* O header é totalmente visível por padrão */
+    pointer-events: all; /* Habilita todas as interações com o header por padrão */
+    transition: opacity .5s ease, backdrop-filter .5s ease, background-color .5s ease; /* Animação suave nas mudanças de opacidade, filtro de fundo e cor de fundo */
+    z-index: 5; /* Garante que o header fique acima de outros elementos na página */
 
     div {
-        display: flex; /* Usa flexbox para o layout interno */
-        justify-content: space-between; /* Distribui o espaço entre os itens de forma igual */
-        align-items: center; /* Alinha os itens verticalmente no centro */
+        display: flex; /* Usa flexbox para organizar os elementos filhos do div */
+        justify-content: space-between; /* Distribui o conteúdo dentro do div com espaçamento entre os itens */
+        align-items: center; /* Alinha verticalmente os itens no centro */
     }
 
     a {
-        color: black; /* Define a cor do texto dos links como preto */
-        text-decoration: none; /* Remove o sublinhado dos links */
-        transition: .3s; /* Adiciona uma transição suave de 0.3 segundos para mudanças de estilo */
+        color: $card-transparent-text-light; /* Define a cor do texto do link quando o header está transparente */
+        text-decoration: none; /* Remove a sublinhado dos links */
+        transition: color .5s ease; /* Transição suave na mudança da cor do link */
+    }
+
+    /* Quando o status de rolagem é 'top' */
+    html[scroll-status='top'] & {
+        background-color: transparent; /* O header permanece transparente no topo da página */
+        backdrop-filter: none; /* Nenhum efeito de fundo quando no topo */
+        box-shadow: none; /* Nenhuma sombra no topo */
+        opacity: 1; /* O header é visível */
+        pointer-events: all; /* As interações com o header continuam ativas */
+
+        a {
+            color: $card-transparent-text-light; /* Define a cor do texto do link quando o header está transparente */
+        }
+    }
+
+    /* Quando o status de rolagem é 'down' */
+    html[scroll-status='down'] & {
+        opacity: 0; /* O header se torna invisível quando rolado para baixo */
+        pointer-events: none; /* As interações são desativadas (o header não é clicável) */
+
+        a {
+            color: transparent; /* Os links se tornam invisíveis junto com o header */
+        }
+    }
+
+    /* Quando o status de rolagem é 'up' ou 'bottom' */
+    html[scroll-status='up'] &,
+    html[scroll-status='bottom'] & {
+        opacity: 1; /* O header reaparece quando rolado para cima ou chega ao fundo */
+        pointer-events: all; /* As interações são reativadas (header clicável) */
+        background-color: $card-light; /* O header ganha um fundo de cor clara */
+        backdrop-filter: blur(10px); /* Aplica um efeito de desfoque (vidro fosco) no fundo */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Aplica uma sombra suave abaixo do header */
+
+        a {
+            color: $card-text-light; /* Os links mudam para uma cor clara quando o header reaparece */
+        }
     }
 }
 
 /* Header Menu */
 .header-menu {
     a:hover {
-        text-decoration: underline; /* Adiciona um sublinhado aos links quando o cursor passa sobre eles */
+        text-decoration: underline; /* Adiciona sublinhado ao passar o mouse sobre os links */
     }
 
     ul {
-        list-style-type: none; /* Remove os marcadores das listas */
-        text-align: right; /* Alinha o texto da lista à direita */
+        list-style-type: none; /* Remove os marcadores de lista */
+        text-align: right; /* Alinha os itens da lista à direita */
     }
 
     li {
-        display: inline-block; /* Exibe os itens da lista em linha */
-        margin: 0 10px; /* Adiciona margem horizontal entre os itens da lista */
-    }
-}
-
-/* Scroll Status */
-html[scroll-status='top'] {
-    header {
-        background-color: transparent; /* Torna o fundo do cabeçalho transparente quando no topo */
-        box-shadow: none; /* Remove a sombra do cabeçalho quando no topo */
-
-        a {
-            color: white; /* Muda a cor dos links para branco quando no topo */
-        }
-    }
-}
-
-html[scroll-status='down'] {
-    header {
-        background-color: transparent; /* Torna o fundo do cabeçalho transparente quando rolando para baixo */
-        box-shadow: none; /* Remove a sombra do cabeçalho quando rolando para baixo */
-        visibility: hidden; /* Torna o cabeçalho invisível quando rolando para baixo */
-
-        a {
-            color: transparent; /* Torna os links invisíveis quando rolando para baixo */
-        }
+        display: inline-block; /* Mostra os itens da lista em linha, horizontalmente */
+        margin: 0 10px; /* Adiciona espaçamento entre os itens */
     }
 }

@@ -5,26 +5,30 @@
     height: 64px; /* Define a altura do botão */
     border-radius: 32px; /* Define as bordas arredondadas do botão */
     background: $card-light; /* Define a cor de fundo do botão */
-    box-shadow: 0 0 3px #00000060; /* Adiciona uma sombra ao botão */
+    backdrop-filter: blur(10px); /* Aplica efeito de vidro fosco */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave ao botão */
     position: fixed; /* Fixa a posição do botão na tela */
-    right: 60px; /* Define a posição do botão à direita */
-    bottom: 35px; /* Define a posição do botão na parte inferior */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    font-size: 24px; /* Define o tamanho da fonte do ícone */
-    transition: .3s; /* Adiciona uma transição suave de 0.3 segundos */
-    cursor: pointer; /* Muda o cursor para ponteiro ao passar sobre o botão */
+    right: 60px; /* Alinha o botão 60px à direita da tela */
+    bottom: 35px; /* Alinha o botão 35px acima da borda inferior da tela */
+    align-items: center; /* Centraliza o conteúdo verticalmente no botão */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente no botão */
+    font-size: 24px; /* Define o tamanho da fonte (ícone) dentro do botão */
+    transition: opacity 0.5s ease, background-color 0.5s ease; /* Transição suave para opacidade e cor de fundo */
+    cursor: pointer; /* Altera o cursor para ponteiro ao passar sobre o botão */
+    opacity: 1; /* O botão é visível por padrão */
 
     i {
-        transition: .3s; /* Adiciona uma transição suave de 0.3 segundos ao ícone */
+        transition: color 0.5s ease; /* Transição suave na mudança de cor do ícone */
     }
-}
 
-html[scroll-status='top'] .click-to-top {
-    background-color: transparent; /* Torna o fundo do botão transparente */
-    visibility: hidden; /* Torna o botão invisível */
+    /* Quando o scroll está no topo da página */
+    html[scroll-status='top'] & {
+        background-color: transparent; /* Torna o fundo do botão transparente */
+        opacity: 0; /* Torna o botão invisível suavemente */
+        pointer-events: none; /* Desativa interações enquanto o botão está invisível */
 
-    i {
-        color: transparent; /* Torna o ícone transparente */
+        i {
+            color: transparent; /* Torna o ícone invisível junto com o botão */
+        }
     }
 }
