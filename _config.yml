@@ -5,6 +5,7 @@ favicon: "/assets/images/favicon.ico"
 
 # Language settings
 languages: [ "br", "us" ]
+translations: [ "br", "us" ]
 exclude_from_localizations: [ "assets" ]
 
 # Collections settings
