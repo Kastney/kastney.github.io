@@ -20,7 +20,7 @@ header {
     }
 
     a {
-        color: $card-transparent-text-light; /* Define a cor do texto do link quando o header está transparente */
+        color: $card-transparent-text; /* Define a cor do texto do link quando o header está transparente */
         text-decoration: none; /* Remove a sublinhado dos links */
         transition: color .5s ease; /* Transição suave na mudança da cor do link */
     }
@@ -34,7 +34,7 @@ header {
         pointer-events: all; /* As interações com o header continuam ativas */
 
         a {
-            color: $card-transparent-text-light; /* Define a cor do texto do link quando o header está transparente */
+            color: $card-transparent-text; /* Define a cor do texto do link quando o header está transparente */
         }
     }
 
