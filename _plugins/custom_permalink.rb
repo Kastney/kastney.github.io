@@ -6,12 +6,14 @@ module Jekyll
             # certificates page
             page = site.pages.find { |page| page.data['posters'] == 'certificates' }
             if page
+                # br
                 site.collections["certificates_br"].docs.each do |doc|
                     if doc.data['code']
                         base_permalink = page.data['permalink']
                         doc.data['permalink'] = "#{base_permalink}#{doc.data['code']}/"
                     end
                 end
+                # us
                 site.collections["certificates_us"].docs.each do |doc|
                     if doc.data['code']
                         base_permalink = page.data['permalink_us']

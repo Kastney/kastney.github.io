@@ -16,15 +16,6 @@ collections:
   certificates_us:
     output: true
 
-# Paginate settings
-pagination:
-  enabled: true
-  debug: false
-  permalink: '/:num/'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
-
 # Markdown settings
 kramdown:
   input: kramdown
@@ -43,7 +34,6 @@ sass:
 # Plugins settings
 plugins:
   - jekyll-multiple-languages-plugin
-  - jekyll-paginate-v2
   #- jekyll-timeago
   #- jekyll-feed
   #- jekyll-seo-tag
