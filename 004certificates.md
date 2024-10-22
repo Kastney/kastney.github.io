@@ -15,10 +15,9 @@ banner:
 ---
 
 <div>
-    Aqui a lista de posters
-    {%- for post in posters -%}
+    {%- for post in posts -%}
         <div>
-            <p>{{ post.name }}</p>
+            <p>{{ post.certificate.name }}</p>
         </div>
     {%- endfor -%}
 </div>
