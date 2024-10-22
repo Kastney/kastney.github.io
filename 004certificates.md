@@ -7,6 +7,7 @@ subtitle: page.certificates.subtitle
 permalink: "/certificados/"
 permalink_us: "/certificates/"
 menu_enabled: true
+collection: certificates
 per_page: 3
 banner:
     title: page.certificates.banner.title
@@ -14,6 +15,7 @@ banner:
 ---
 
 <div>
+    Aqui a lista de posters
     {%- for post in posters -%}
         <div>
             <p>{{ post.name }}</p>
