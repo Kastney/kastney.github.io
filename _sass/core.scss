@@ -1,11 +1,12 @@
 @charset "utf-8"; /* Define a codificação de caracteres como UTF-8, que é uma codificação padrão para a maioria dos sites */
 
 /* Cores gerais do site */
-$background-color-light: #dddddd !default;
 $card-transparent-text: #fefefe !default;
 
 /* Cores do tema claro */
+$background-color-light: #dddddd !default;
 $card-light: rgba(255, 255, 255, 0.7) !default;
+$card-hover-light: #ececec !default;
 $card-solid-light: #f5f5f5 !default;
 $card-text-light: #353535 !default;
 
@@ -22,7 +23,7 @@ $max-width-content: 1080px !default;
 
 
 
-$card-hover-light: #f0f0f0 !default;
+
 
 /* Estilos gerais aplicados a todos os elementos */
 * {
