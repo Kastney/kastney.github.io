@@ -10,7 +10,7 @@ layout: compress
     <main>
       {%- include views/banner.html -%}
       {%- include views/click_to_top.html -%}
-      <section>
+      <section class="content">
         {{ content }}
       </section>
     </main>

@@ -18,7 +18,7 @@
         -webkit-user-drag: none; /* Desativa a possibilidade de arrastar a imagem no Safari */
     }
 
-    .content {
+    .banner-content {
         position: relative; /* Define a posição relativa para que o z-index funcione corretamente */
         z-index: 2; /* Garante que o conteúdo esteja acima da imagem de fundo */
         display: flex; /* Usa flexbox para o layout */
@@ -27,7 +27,7 @@
         align-items: center; /* Centraliza os itens horizontalmente */
         height: 100%; /* Ocupa 100% da altura da seção */
         margin: 0 30px; /* Adiciona margem horizontal de 30 pixels */
-        text-align: center; /* Centraliza o texto dentro da `.content` */
+        text-align: center; /* Centraliza o texto dentro da `.banner-content` */
         
         h1 {
             font-size: 2em; /* Define o tamanho da fonte para o título */

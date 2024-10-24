@@ -1,12 +1,16 @@
 @charset "utf-8"; /* Define a codificação de caracteres como UTF-8, que é uma codificação padrão para a maioria dos sites */
 
 /* Cores gerais do site */
+$background-color-light: #dddddd !default;
 $card-transparent-text: #fefefe !default;
 
 /* Cores do tema claro */
 $card-light: rgba(255, 255, 255, 0.7) !default;
+$card-solid-light: #f5f5f5 !default;
 $card-text-light: #353535 !default;
 
+/* Parâmetros gerais do site */
+$max-width-content: 1080px !default;
 
 
 
@@ -18,8 +22,6 @@ $card-text-light: #353535 !default;
 
 
 
-
-$background-color-light: #dddddd !default;
 $card-hover-light: #f0f0f0 !default;
 
 /* Estilos gerais aplicados a todos os elementos */
@@ -35,6 +37,13 @@ body {
     background-color: $background-color-light; /* Define a cor de fundo do body */
 }
 
+.content {
+    width: 100%;
+    max-width: $max-width-content;
+    padding: 20px;
+    margin: auto;
+}
+
 .unselectable {
     user-select: none; /* Desativa a seleção de texto dentro do botão */
     -webkit-user-select: none; /* Desativa a seleção de texto no Safari */
@@ -44,8 +53,10 @@ body {
 
 /* Importa outros arquivos de estilo */
 @import
-    "layouts/header", /* Importa estilos do arquivo "header" localizado na pasta "layouts" */
-    "layouts/banner", /* Importa estilos do arquivo "banner" localizado na pasta "layouts" */
-    "layouts/click-to-top", /* Importa estilos do arquivo "click-to-top" localizado na pasta "layouts" */
-    "layouts/dropdown", /* Importa estilos do arquivo "dropdown" localizado na pasta "layouts" */
-    "layouts/footer" /* Importa estilos do arquivo "footer" localizado na pasta "layouts" */;
+    "layouts/header", /* Importa estilos do arquivo "header" */
+    "layouts/banner", /* Importa estilos do arquivo "banner" */
+    "layouts/click-to-top", /* Importa estilos do arquivo "click-to-top" */
+    "layouts/dropdown", /* Importa estilos do arquivo "dropdown" */
+    "layouts/footer", /* Importa estilos do arquivo "footer" */
+    "layouts/layout", /* Importa estilos do arquivo "layout" */
+    "layouts/card" /* Importa estilos do arquivo "card" */;

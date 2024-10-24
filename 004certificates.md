@@ -13,11 +13,3 @@ banner:
     title: page.certificates.banner.title
     image: "/assets/banner/banner.jpg"
 ---
-
-<div>
-    {%- for post in posts -%}
-        <div>
-            <p>{{ post.certificate.name }}</p>
-        </div>
-    {%- endfor -%}
-</div>
