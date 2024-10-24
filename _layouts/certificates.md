@@ -4,10 +4,11 @@ layout: default
 
 {{ content }}
 
-<div class="container">
+<div class="certificate-container unselectable">
     {%- for post in posts -%}
-        <div class="card">
-            <p>{{ post.certificate.name }}</p>
+        <div class="certificate-card">
+            <p class="certificate-type">Curso</p>
+            <img src="/assets/banner/banner.jpg" />
         </div>
     {%- endfor -%}
 </div>

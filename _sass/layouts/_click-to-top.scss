@@ -5,7 +5,7 @@
     height: 64px; /* Define a altura do botão */
     border-radius: 32px; /* Define as bordas arredondadas do botão */
     background: $card-light; /* Define a cor de fundo do botão */
-    backdrop-filter: blur(10px); /* Aplica efeito de vidro fosco */
+    backdrop-filter: $frosted-glass-effect; /* Aplica efeito de vidro fosco */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave ao botão */
     position: fixed; /* Fixa a posição do botão na tela */
     right: 60px; /* Alinha o botão 60px à direita da tela */

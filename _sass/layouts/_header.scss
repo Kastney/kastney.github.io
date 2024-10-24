@@ -12,6 +12,7 @@ header {
     pointer-events: all; /* Habilita todas as interações com o header por padrão */
     transition: opacity .5s ease, backdrop-filter .5s ease, background-color .5s ease; /* Animação suave nas mudanças de opacidade, filtro de fundo e cor de fundo */
     z-index: 5; /* Garante que o header fique acima de outros elementos na página */
+    font-weight: 450; /* Define o tamanho do preenchimento da fonte */
 
     div {
         display: flex; /* Usa flexbox para organizar os elementos filhos do div */
@@ -54,7 +55,7 @@ header {
         opacity: 1; /* O header reaparece quando rolado para cima ou chega ao fundo */
         pointer-events: all; /* As interações são reativadas (header clicável) */
         background-color: $card-light; /* O header ganha um fundo de cor clara */
-        backdrop-filter: blur(10px); /* Aplica um efeito de desfoque (vidro fosco) no fundo */
+        backdrop-filter: $frosted-glass-effect; /* Aplica um efeito de desfoque (vidro fosco) no fundo */
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Aplica uma sombra suave abaixo do header */
 
         a {
