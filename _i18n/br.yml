@@ -9,6 +9,9 @@ banner:
   click_to_more: "Desça para saber mais"
 footer:
   experience: "Você está acessando a experiência:"
+certificate:
+  tag:
+    course: "curso"
 page:
   index:
     title: "Início"

@@ -5,7 +5,7 @@ $card-transparent-text: #fefefe !default;
 $frosted-glass-effect: blur(7px) !default;
 
 /* Cores do tema claro */
-$background-color-light: #dddddd !default;
+$background-color-light: #dcdcdc !default;
 $card-light: rgba(255, 255, 255, 0.7) !default;
 $card-hover-light: #ececec !default;
 $card-solid-light: #f5f5f5 !default;
@@ -39,10 +39,16 @@ body {
     background-color: $background-color-light; /* Define a cor de fundo do body */
 }
 
+img {
+    pointer-events: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+}
+
 .content {
     width: 100%;
     max-width: $max-width-content;
-    padding: 20px;
+    padding: 40px 20px;
     margin: auto;
 }
 

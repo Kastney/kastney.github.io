@@ -8,7 +8,7 @@ permalink: "/certificados/"
 permalink_us: "/certificates/"
 menu_enabled: true
 collection: certificates
-per_page: 3
+per_page: 10
 banner:
     title: page.certificates.banner.title
     image: "/assets/banner/banner.jpg"

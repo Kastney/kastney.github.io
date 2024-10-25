@@ -13,9 +13,6 @@
         width: 100%; /* Define a largura da imagem para 100% da largura da seção */
         object-fit: cover; /* Faz com que a imagem cubra toda a área do contêiner */
         object-position: center; /* Centraliza a imagem dentro do contêiner */
-        pointer-events: none; /* Desativa eventos do ponteiro (como cliques) na imagem */
-        user-drag: none; /* Desativa a possibilidade de arrastar a imagem */
-        -webkit-user-drag: none; /* Desativa a possibilidade de arrastar a imagem no Safari */
     }
 
     .banner-content {

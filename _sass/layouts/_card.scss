@@ -1,13 +1,15 @@
 .certificate-card {
     position: relative;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    overflow: hidden;    
-    height: 350px;
-    max-width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 300px;
+    max-width: 200px;
     width: 100%;
     margin: 0 auto;
-          
+    font-weight: 500;
+    font-size: small;
+
     img {
         position: absolute;
         width: 100%;
@@ -16,21 +18,32 @@
         object-position: center;
         z-index: 1;
         border: 12px solid $card-solid-light;
-        pointer-events: none;
-        user-drag: none;
-        -webkit-user-drag: none;
     }
 
     .certificate-type {
         position: absolute;
+        display: flex;
+        align-items: center;
         top: 0;
         left: 0;
         z-index: 2;
         padding: 5px 10px;
-        font-size: small;
-        color: $card-text-light;
         background-color: $card-light;
         backdrop-filter: $frosted-glass-effect;
         border-radius: 0 0 10px 0;
+        font-size: 11px;
+
+        i {
+            margin-right: 2px;
+        }
+    }
+
+    .certificate-content {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        padding: 5px 10px;
+        background-color: $card-light;
+        backdrop-filter: $frosted-glass-effect;
     }
 }
