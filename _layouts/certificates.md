@@ -10,7 +10,7 @@ layout: default
             {%- if post.type -%}
                 {% if post.type == "course" %}
                     <div class="certificate-type">
-                        <i class="fa fa-award"></i>
+                        <i class="fa-solid fa-graduation-cap"></i>
                         <p>{%- translate certificate.tag.course -%}</p>
                     </div>                    
                 {% elsif post.type == "pendente" %}
