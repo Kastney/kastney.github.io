@@ -10,8 +10,11 @@ banner:
 footer:
   experience: "You are accessing the experience:"
 certificate:
-  tag:
+  tags:
     course: "course"
+    project: "project"
+    webinar: "webinar"
+    bootcamp: "bootcamp"
 page:
   index:
     title: "Home"
