@@ -11,26 +11,30 @@ layout: default
                 <div class="certificate-type">
                     {% if post.type == "course" %}
                         <i class="fa-solid fa-graduation-cap"></i>
-                        <p>{%- translate certificate.tags.course -%}</p>
+                        <span>{%- translate certificate.tags.course -%}</span>
                     {% elsif post.type == "project" %}
                         <i class="fa-solid fa-rocket"></i>
-                        <p>{%- translate certificate.tags.project -%}</p>
+                        <span>{%- translate certificate.tags.project -%}</span>
                     {% elsif post.type == "webinar" %}
                         <i class="fa-solid fa-users-viewfinder"></i>
-                        <p>{%- translate certificate.tags.webinar -%}</p>
+                        <span>{%- translate certificate.tags.webinar -%}</span>
                     {% elsif post.type == "bootcamp" %}
                         <i class="fa-solid fa-users-gear"></i>
-                        <p>{%- translate certificate.tags.bootcamp -%}</p>
+                        <span>{%- translate certificate.tags.bootcamp -%}</span>
                     {% endif %}
                 </div>
             {%- endif -%}
-            <img src="/assets/banner/banner.jpg" />
+            <img class="thumbnail" src="/assets/banner/banner.jpg" />
             <div class="certificate-content">
+                {%- assign business = site.data.business[post.authority] -%}
+                {%- if business -%}
+                    <div class="authority">
+                        <img src="{{business.logo}}" />
+                        <span>{{business.name}}</span>
+                    </div>
+                {%- endif -%}
                 <p><strong>{{post.certificate.name}}</strong></p>
-                <p>{{post.authority.name}}</p>
-                <div>
-                    <span>Azure</span>
-                </div>
+                <span>{{post.date | date: "%d de %b de %Y"}}</span>
             </div>
         </div>
     {%- endfor -%}
