@@ -34,7 +34,7 @@ layout: default
                     </div>
                 {%- endif -%}
                 <p><strong>{{post.certificate.name}}</strong></p>
-                <span>{{post.date | date: "%d de %b de %Y"}}</span>
+                <span>{{post.date | localized_date: site.translations[site.lang].core.lang}}</span>
             </div>
         </div>
     {%- endfor -%}
