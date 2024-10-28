@@ -7,6 +7,7 @@ layout: default
 <div class="certificate-container unselectable">
     {%- for post in posts -%}
         <div class="certificate-card">
+            <!-- Tipo do certificado -->
             {%- if post.type -%}
                 <div class="certificate-type">
                     {% if post.type == "course" %}
@@ -24,17 +25,38 @@ layout: default
                     {% endif %}
                 </div>
             {%- endif -%}
+            <!-- Imagem ilustrativa do certificado -->
             <img class="thumbnail" src="/assets/banner/banner.jpg" />
+            <!-- Conteúdos do certificado -->
             <div class="certificate-content">
-                {%- assign business = site.data.business[post.authority] -%}
-                {%- if business -%}
-                    <div class="authority">
-                        <img src="{{business.logo}}" />
-                        <span>{{business.name}}</span>
+                <!-- Competências do certificado -->
+                {%- if post.competencies -%}
+                    <div class="certificate-competencies">
+                        {%- for item in post.competencies -%}
+                            {%- if forloop.index <= 3 -%}
+                                {%- assign competence = site.data.competencies[item] -%}
+                                {%- if competence -%}
+                                    <img src="{{competence.logo}}" style="background-color:{{competence.color}}" />
+                                {%- endif -%}
+                            {%- endif -%}
+                        {%- endfor -%}
                     </div>
-                {%- endif -%}
-                <p><strong>{{post.certificate.name}}</strong></p>
-                <span>{{post.date | localized_date: site.translations[site.lang].core.lang}}</span>
+                {% endif- -%}
+                <!-- Área para o conteúdo principal do certificado -->
+                <div class="certificate-area">
+                    <!-- Empresa emissora do certificado -->
+                    {%- assign authority = site.data.authority[post.authority] -%}
+                    {%- if authority -%}
+                        <div class="certificate-authority">
+                            <img src="{{authority.logo}}" />
+                            <span>{{authority.name}}</span>
+                        </div>
+                    {%- endif -%}
+                    <!-- Nome do certificado -->
+                    <p><strong>{{post.certificate.name}}</strong></p>
+                    <!-- Data de emissão do certificado -->
+                    <span>{{post.date | localized_date: site.translations[site.lang].core.lang}}</span>
+                </div>
             </div>
         </div>
     {%- endfor -%}

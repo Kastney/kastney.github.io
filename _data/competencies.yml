@@ -1,0 +1,9 @@
+html5:
+  logo: "/assets/images/logos/html5.svg"
+  color: rgba(227,79,38,0.7)
+css3:
+  logo: "/assets/images/logos/css3.svg"
+  color: rgba(21,114,182,0.7)
+javascript:
+  logo: "/assets/images/logos/javascript.svg"
+  color: rgba(247,223,30,0.7)
