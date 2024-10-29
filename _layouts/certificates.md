@@ -4,6 +4,8 @@ layout: default
 
 {{ content }}
 
+<h2>{%- translate page.certificates.section_certificates -%}</h2>
+
 <div class="certificate-container unselectable">
     {%- for post in posts -%}
         <div class="certificate-card">

@@ -39,6 +39,11 @@ body {
     background-color: $background-color-light; /* Define a cor de fundo do body */
 }
 
+h2 {
+    font-size: x-large;
+    padding: 40px 0;
+}
+
 img {
     pointer-events: none;
     user-drag: none;
