@@ -4,10 +4,9 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     height: 300px;
-    max-width: 200px;
+    max-width: 220px;
     width: 100%;
     margin: 0 auto;
-    font-weight: 500;
     font-size: 12px;
 
     .certificate-type {
@@ -19,7 +18,8 @@
         background-color: $card-light;
         backdrop-filter: $frosted-glass-effect;
         border-radius: 0 0 10px 0;
-        font-size: 10px;
+        font-weight: bold;
+        font-size: 11px;
     }
 
     .thumbnail {
@@ -56,19 +56,19 @@
         .certificate-area {
             background-color: $card-light;
             backdrop-filter: $frosted-glass-effect;
-            padding: 5px 10px 10px 10px;
+            padding: 5px 10px 5px 10px;
 
             span {
                 font-size: 10px;
             }
 
             img {
-                height: 16px;
-                width: 16px;
+                height: 13px;
+                width: 13px;
             }
 
             p {
-                padding-top: 5px;
+                padding: 8px 0;
             }
 
             .certificate-authority {
