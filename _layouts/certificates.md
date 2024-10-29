@@ -26,7 +26,7 @@ layout: default
                 </div>
             {%- endif -%}
             <!-- Imagem ilustrativa do certificado -->
-            <img class="thumbnail" src="/assets/banner/banner.jpg" />
+            <img class="thumbnail" src="/assets/images/certificates/{{post.code}}.jpeg" />
             <!-- Conteúdos do certificado -->
             <div class="certificate-content">
                 <!-- Competências do certificado -->
