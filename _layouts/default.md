@@ -11,7 +11,7 @@ layout: compress
       {%- include views/banner.html -%}
       {%- include views/click_to_top.html -%}
       <section class="content">
-        {{ content }}
+        {{content}}
       </section>
     </main>
     {%- include views/footer.html -%}

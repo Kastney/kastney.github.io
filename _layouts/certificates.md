@@ -2,11 +2,11 @@
 layout: default
 ---
 
-{{ content }}
+{{content}}
 
 <h2>{%- translate page.certificates.section_certificates -%}</h2>
 
-<div class="certificate-container unselectable">
+<div class="certificate-container">
     {%- for post in posts -%}
         <div class="certificate-card">
             <!-- Tipo do certificado -->
@@ -16,25 +16,25 @@ layout: default
                         <i class="fa-solid fa-graduation-cap"></i>
                         <span>
                             {%- translate certificate.tags.course -%}
-                            {%- if post.certificate.workload %} • {{ post.certificate.workload | extract_hours }}h{%- endif -%}
+                            {%- if post.certificate.workload %} • {{post.certificate.workload | extract_hours}}h{%- endif -%}
                         </span>
                     {% elsif post.type == "project" %}
                         <i class="fa-solid fa-rocket"></i>
                         <span>
                             {%- translate certificate.tags.project -%}
-                            {%- if post.certificate.workload %} • {{ post.certificate.workload | extract_hours }}h{%- endif -%}
+                            {%- if post.certificate.workload %} • {{post.certificate.workload | extract_hours}}h{%- endif -%}
                         </span>
                     {% elsif post.type == "webinar" %}
                         <i class="fa-solid fa-users-viewfinder"></i>
                         <span>
                             {%- translate certificate.tags.webinar -%}
-                            {%- if post.certificate.workload %} • {{ post.certificate.workload | extract_hours }}h{%- endif -%}
+                            {%- if post.certificate.workload %} • {{post.certificate.workload | extract_hours}}h{%- endif -%}
                         </span>
                     {% elsif post.type == "bootcamp" %}
                         <i class="fa-solid fa-users-gear"></i>
                         <span>
                             {%- translate certificate.tags.bootcamp -%}
-                            {%- if post.certificate.workload %} • {{ post.certificate.workload | extract_hours }}h{%- endif -%}
+                            {%- if post.certificate.workload %} • {{post.certificate.workload | extract_hours}}h{%- endif -%}
                         </span>
                     {% endif %}
                 </div>

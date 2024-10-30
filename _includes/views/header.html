@@ -1,14 +1,14 @@
 {%- if page.banner -%}
-    {%- assign banner_class = "has-banner " -%}
+    {%- assign banner_class = "has-banner" -%}
 {%- else -%}
-    {%- assign banner_class = "not-banner " -%}
+    {%- assign banner_class = "not-banner" -%}
 {%- endif -%}
-<header class="{{banner_class}}unselectable">
+<header class="{{banner_class}}">
     <div>
         <!-- Title -->
         <section>
             {%- if site.lang == site.languages.first -%}
-                <a target="_self" rel="author" href="{{ "/" | relative_url }}">{%- translate core.name -%}</a>
+                <a target="_self" rel="author" href="{{"/" | relative_url}}">{%- translate core.name -%}</a>
             {%- else -%}
                 <a target="_self" rel="author" href="/{{site.lang}}/">{%- translate core.name -%}</a>
             {%- endif -%}
@@ -34,12 +34,12 @@
                                     {%- capture item_text -%}
                                         {%- translate item.title_header -%}
                                     {%- endcapture -%}
-                                    <li><a target="_self" href="{{ href }}">{{ item_text | upcase | escape }}</a></li>
+                                    <li><a target="_self" href="{{href}}">{{item_text | upcase | escape}}</a></li>
                                 {%- else -%}
                                     {%- capture item_text -%}
                                         {%- translate item.title -%}
                                     {%- endcapture -%}
-                                    <li><a target="_self" href="{{ href }}">{{ item_text | upcase | escape }}</a></li>
+                                    <li><a target="_self" href="{{href}}">{{item_text | upcase | escape}}</a></li>
                                 {%- endif -%}
                             {%- endif -%}
                         {%- endfor -%}

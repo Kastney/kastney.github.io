@@ -1,4 +1,4 @@
-<footer class="unselectable">
+<footer>
     <hr>
     
     <div class="content">
@@ -86,5 +86,5 @@
         {%- translate core.copyright -%}
     {%- endcapture -%}
     {%- assign copyright = core_copyright | replace: "$current_year", current_year | replace: "(c)", "&copy;" -%}
-    <p class="copyright">{{ copyright }}</p>
+    <p class="copyright">{{copyright}}</p>
 </footer>

@@ -4,7 +4,7 @@
   
   <!-- Favicon -->
   {%- if site.favicon != null -%}
-  <link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{site.favicon}}" type="image/x-icon">
   {%- endif -%}
 
   <!-- Styles -->
@@ -19,9 +19,9 @@
       {%- capture page_title -%}
         {%- translate page.title -%}
       {%- endcapture -%}
-      {{ page_title }} | {{ site_title }}
+      {{page_title}} | {{site_title}}
     {%- else -%}
-      {{ site_title }}
+      {{site_title}}
     {%- endif -%}
   </title>
 
