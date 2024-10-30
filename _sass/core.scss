@@ -3,6 +3,7 @@
 /* Cores gerais do site */
 $card-transparent-text: #fefefe !default;
 $frosted-glass-effect: blur(7px) !default;
+$box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
 /* Cores do tema claro */
 $background-color-light: #dcdcdc !default;
@@ -41,7 +42,7 @@ body {
 
 h2 {
     font-size: x-large;
-    padding: 40px 0;
+    padding: 40px 0 20px 0;
 }
 
 img {

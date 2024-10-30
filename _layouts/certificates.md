@@ -47,7 +47,7 @@ layout: default
                 {%- if post.competencies -%}
                     <div class="certificate-competencies">
                         {%- for item in post.competencies -%}
-                            {%- if forloop.index <= 3 -%}
+                            {%- if forloop.index <= 4 -%}
                                 {%- assign competence = site.data.competencies[item] -%}
                                 {%- if competence -%}
                                     <img src="{{competence.logo}}" style="background-color:{{competence.color}}" />

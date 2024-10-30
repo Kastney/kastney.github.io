@@ -9,7 +9,7 @@
         width: 100%; /* Define a largura do botão para 100% do contêiner pai */
         padding: 10px; /* Adiciona 10px de preenchimento interno em todos os lados do botão */
         font-size: 16px; /* Define o tamanho da fonte para 16px */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao botão */
+        box-shadow: $box-shadow; /* Adiciona uma sombra sutil ao botão */
         border: none; /* Remove a borda do botão */
         border-radius: 8px; /* Adiciona bordas arredondadas com raio de 8px */
         cursor: pointer; /* Muda o cursor para uma mão quando passa sobre o botão */

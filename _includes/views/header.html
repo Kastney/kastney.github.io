@@ -1,11 +1,16 @@
-<header class="unselectable">
+{%- if page.banner -%}
+    {%- assign banner_class = "has-banner " -%}
+{%- else -%}
+    {%- assign banner_class = "not-banner " -%}
+{%- endif -%}
+<header class="{{banner_class}}unselectable">
     <div>
         <!-- Title -->
         <section>
             {%- if site.lang == site.languages.first -%}
                 <a target="_self" rel="author" href="{{ "/" | relative_url }}">{%- translate core.name -%}</a>
             {%- else -%}
-                <a target="_self" rel="author" href="/{{ site.lang }}/">{%- translate core.name -%}</a>
+                <a target="_self" rel="author" href="/{{site.lang}}/">{%- translate core.name -%}</a>
             {%- endif -%}
         </section>
 

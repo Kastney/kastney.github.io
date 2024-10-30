@@ -1,82 +1,104 @@
-/* Header */
 header {
-    padding: 20px; /* Adiciona preenchimento ao redor do conteúdo do header */
-    width: 100%; /* O header ocupa toda a largura da página */
-    top: 0; /* Fixa o header no topo da página */
-    left: 0; /* Fixa o header no início horizontal da página */
-    position: fixed; /* O header permanece fixo na posição, mesmo com o scroll */
-    background-color: transparent; /* Fundo transparente por padrão */
-    backdrop-filter: none; /* Nenhum efeito de vidro fosco por padrão */
-    box-shadow: none; /* Nenhuma sombra por padrão */
-    opacity: 1; /* O header é totalmente visível por padrão */
-    pointer-events: all; /* Habilita todas as interações com o header por padrão */
-    transition: opacity .5s ease, backdrop-filter .5s ease, background-color .5s ease; /* Animação suave nas mudanças de opacidade, filtro de fundo e cor de fundo */
-    z-index: 5; /* Garante que o header fique acima de outros elementos na página */
-    font-weight: 450; /* Define o tamanho do preenchimento da fonte */
+    padding: 20px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 5;
+    font-weight: 450;
+    transition: opacity 0.5s ease, backdrop-filter 0.5s ease, background-color 0.5s ease;
 
     div {
-        display: flex; /* Usa flexbox para organizar os elementos filhos do div */
-        justify-content: space-between; /* Distribui o conteúdo dentro do div com espaçamento entre os itens */
-        align-items: center; /* Alinha verticalmente os itens no centro */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     a {
-        color: $card-transparent-text; /* Define a cor do texto do link quando o header está transparente */
-        text-decoration: none; /* Remove a sublinhado dos links */
-        transition: color .5s ease; /* Transição suave na mudança da cor do link */
+        text-decoration: none;
+        transition: color 0.5s ease;
     }
 
-    /* Quando o status de rolagem é 'top' */
-    html[scroll-status='top'] & {
-        background-color: transparent; /* O header permanece transparente no topo da página */
-        backdrop-filter: none; /* Nenhum efeito de fundo quando no topo */
-        box-shadow: none; /* Nenhuma sombra no topo */
-        opacity: 1; /* O header é visível */
-        pointer-events: all; /* As interações com o header continuam ativas */
+    &.has-banner {
+        background-color: transparent;
+        backdrop-filter: none;
+        box-shadow: none;
+        opacity: 1;
+        pointer-events: all;
 
         a {
-            color: $card-transparent-text; /* Define a cor do texto do link quando o header está transparente */
+            color: $card-transparent-text;
+        }
+
+        html[scroll-status='top'] & {
+            background-color: transparent;
+            backdrop-filter: none;
+            box-shadow: none;
+        }
+
+        html[scroll-status='down'] & {
+            opacity: 0;
+            pointer-events: none;
+
+            a {
+                color: transparent;
+            }
+        }
+
+        html[scroll-status='up'] &,
+        html[scroll-status='bottom'] & {
+            opacity: 1;
+            pointer-events: all;
+            background-color: $card-light;
+            backdrop-filter: $frosted-glass-effect;
+            box-shadow: $box-shadow;
+
+            a {
+                color: $card-text-light;
+            }
         }
     }
 
-    /* Quando o status de rolagem é 'down' */
-    html[scroll-status='down'] & {
-        opacity: 0; /* O header se torna invisível quando rolado para baixo */
-        pointer-events: none; /* As interações são desativadas (o header não é clicável) */
+    &.not-banner {
+        background-color: $card-light;
+        backdrop-filter: $frosted-glass-effect;
+        box-shadow: $box-shadow;
+        opacity: 1;
+        pointer-events: all;
 
         a {
-            color: transparent; /* Os links se tornam invisíveis junto com o header */
+            color: $card-text-light;
+        }
+
+        html[scroll-status='down'] & {
+            opacity: 0;
+            pointer-events: none;
+
+            a {
+                color: transparent;
+            }
+        }
+
+        html[scroll-status='up'] &,
+        html[scroll-status='bottom'] & {
+            opacity: 1;
+            pointer-events: all;
         }
     }
 
-    /* Quando o status de rolagem é 'up' ou 'bottom' */
-    html[scroll-status='up'] &,
-    html[scroll-status='bottom'] & {
-        opacity: 1; /* O header reaparece quando rolado para cima ou chega ao fundo */
-        pointer-events: all; /* As interações são reativadas (header clicável) */
-        background-color: $card-light; /* O header ganha um fundo de cor clara */
-        backdrop-filter: $frosted-glass-effect; /* Aplica um efeito de desfoque (vidro fosco) no fundo */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Aplica uma sombra suave abaixo do header */
-
-        a {
-            color: $card-text-light; /* Os links mudam para uma cor clara quando o header reaparece */
+    .header-menu {
+        a:hover {
+            text-decoration: underline;
         }
-    }
-}
 
-/* Header Menu */
-.header-menu {
-    a:hover {
-        text-decoration: underline; /* Adiciona sublinhado ao passar o mouse sobre os links */
-    }
+        ul {
+            list-style-type: none;
+            text-align: right;
+        }
 
-    ul {
-        list-style-type: none; /* Remove os marcadores de lista */
-        text-align: right; /* Alinha os itens da lista à direita */
-    }
-
-    li {
-        display: inline-block; /* Mostra os itens da lista em linha, horizontalmente */
-        margin: 0 10px; /* Adiciona espaçamento entre os itens */
+        li {
+            display: inline-block;
+            margin: 0 10px;
+        }
     }
 }
