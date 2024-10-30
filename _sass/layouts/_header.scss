@@ -19,7 +19,7 @@ header {
         transition: color 0.5s ease;
     }
 
-    &.has-banner {
+    &[banner='true'] {
         background-color: transparent;
         backdrop-filter: none;
         box-shadow: none;
@@ -59,7 +59,7 @@ header {
         }
     }
 
-    &.not-banner {
+    &[banner='false'] {
         background-color: $card-light;
         backdrop-filter: $frosted-glass-effect;
         box-shadow: $box-shadow;

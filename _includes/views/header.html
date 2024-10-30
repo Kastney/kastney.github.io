@@ -1,9 +1,9 @@
 {%- if page.banner -%}
-    {%- assign banner_class = "has-banner" -%}
+    {%- assign has_banner = true -%}
 {%- else -%}
-    {%- assign banner_class = "not-banner" -%}
+    {%- assign has_banner = false -%}
 {%- endif -%}
-<header class="{{banner_class}}">
+<header banner="{{has_banner}}">
     <div>
         <!-- Title -->
         <section>

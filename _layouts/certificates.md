@@ -40,7 +40,7 @@ layout: default
                 </div>
             {%- endif -%}
             <!-- Imagem ilustrativa do certificado -->
-            <img class="thumbnail" src="/assets/images/certificates/{{post.code}}/thumb.jpeg" />
+            <img class="thumbnail" src="/assets/images/certificates/{{post.code}}/thumb.jpeg" alt="Certificates" oncontextmenu="return false;" />
             <!-- Conteúdos do certificado -->
             <div class="certificate-content">
                 <!-- Competências do certificado -->

@@ -1,5 +1,5 @@
-<section class="banner">
-    {%- if page.banner -%}
+{%- if page.banner -%}
+    <section class="banner">
         {%- if page.banner.video -%}
             Banner com vídeo
         {%- else if page.banner.image -%}
@@ -37,7 +37,5 @@
                 <i class="fa-solid fa-angles-down"></i>
             </div>
         {%- endif -%}
-    {%- else -%}
-        Banner padrão
-    {%- endif -%}
-</section>
+    </section>
+{%- endif -%}
