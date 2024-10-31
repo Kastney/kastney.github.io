@@ -8,7 +8,12 @@ layout: default
 
 <div class="certificate-container">
     {%- for post in posts -%}
-        <div class="certificate-card">
+        {%- if site.lang != site.languages[0] -%}
+            {%- assign card_url = "/" | append: site.lang | append: post.url -%}
+        {%- else -%}
+            {%- assign card_url = post.url -%}
+        {%- endif -%}
+        <a target="_self" rel="bookmark" href="{{card_url}}" class="certificate-card">
             <!-- Tipo do certificado -->
             {%- if post.type -%}
                 <div class="certificate-type">
@@ -72,6 +77,6 @@ layout: default
                     <span>{{post.date | localized_date: site.translations[site.lang].core.lang}}</span>
                 </div>
             </div>
-        </div>
+        </a>
     {%- endfor -%}
 </div>

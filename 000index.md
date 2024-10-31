@@ -18,4 +18,6 @@ banner:
     image: "/assets/banner/banner.jpg"
 ---
 
+<a href="/certificados">Certificados</a>
+
 {% translate_file index.md %}
