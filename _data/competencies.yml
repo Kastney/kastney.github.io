@@ -7,3 +7,6 @@ css3:
 javascript:
   logo: "/assets/images/logos/javascript.svg"
   color: rgba(49,49,49,0.7)
+googlegemini:
+  logo: "/assets/images/logos/googlegemini.svg"
+  color: rgba(43,170,236,0.6)

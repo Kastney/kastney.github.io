@@ -1,3 +1,6 @@
 dio:
   name: "Digital Innovation One"
   logo: "/assets/images/authorities/dio.png"
+alura:
+  name: "Alura"
+  logo: "/assets/images/authorities/alura.png"
