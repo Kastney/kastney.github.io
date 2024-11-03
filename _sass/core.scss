@@ -51,6 +51,12 @@ img {
     max-width: $max-width-content;
     padding: 40px 20px;
     margin: auto;
+
+    &>p {
+        margin-bottom: 15px;
+        text-align: justify;
+        text-indent: 2em;
+    }
 }
 
 @import
