@@ -55,7 +55,7 @@ layout: default
                             {%- if forloop.index <= 4 -%}
                                 {%- assign competence = site.data.competencies[item] -%}
                                 {%- if competence -%}
-                                    <img src="{{competence.logo}}" style="background-color:{{competence.color}}" />
+                                    <img src="{{competence.logo}}" />
                                 {%- endif -%}
                             {%- endif -%}
                         {%- endfor -%}

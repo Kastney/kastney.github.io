@@ -45,9 +45,11 @@
             column-gap: 4px;
 
             img {
+                background-color: rgba(255, 255, 255, 0.5);
                 backdrop-filter: $frosted-glass-effect;
-                border-radius: 7px;
-                padding: 5px;
+                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
+                border-radius: 6px;
+                padding: 4px;
                 height: 26px;
                 width: 26px;
             }

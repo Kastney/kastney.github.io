@@ -1,15 +1,10 @@
 html5:
   logo: "/assets/images/logos/html5.svg"
-  color: rgba(227,79,38,0.7)
 css3:
   logo: "/assets/images/logos/css3.svg"
-  color: rgba(21,114,182,0.7)
 javascript:
   logo: "/assets/images/logos/javascript.svg"
-  color: rgba(49,49,49,0.7)
 google-gemini:
   logo: "/assets/images/logos/google-gemini.svg"
-  color: rgba(255,255,255,0.7)
 visual-studio-code:
   logo: "/assets/images/logos/visual-studio-code.svg"
-  color: rgba(255,255,255,0.7)
