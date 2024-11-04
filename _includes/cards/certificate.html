@@ -1,0 +1,27 @@
+{%- if site.lang != site.languages[0] -%}
+    {%- assign card_url = "/" | append: site.lang | append: card_post.url -%}
+{%- else -%}
+    {%- assign card_url = card_post.url -%}
+{%- endif -%}
+
+<a target="_self" rel="bookmark" href="{{card_url}}" class="certificate-card">
+    <!-- Tipo do certificado -->
+    <div class="certificate-type">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>Um texto aqui</span>
+    </div>
+    <img class="thumbnail" src="/assets/images/certificates/{{card_post.code}}/thumb.jpeg" alt="Certificates" oncontextmenu="return false;" />
+    <div class="certificate-content">
+        <div class="certificate-competencies">
+            <img src="{{competence.logo}}" />
+        </div>
+        <div class="certificate-area">
+            <div class="certificate-authority">
+                <img src="{{authority.logo}}" />
+                <span>{{authority.name}}</span>
+            </div>
+            <p><strong>{{post.certificate.name}}</strong></p>
+            <span>{{post.date | localized_date: site.translations[site.lang].core.lang}}</span>
+        </div>
+    </div>
+</a>
