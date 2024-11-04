@@ -4,24 +4,77 @@
     {%- assign card_url = card_post.url -%}
 {%- endif -%}
 
-<a target="_self" rel="bookmark" href="{{card_url}}" class="certificate-card">
+{%- if card_is_linkable == null -%}
+    {%- assign card_is_linkable = true -%}
+{%- endif -%}
+
+{%- if card_is_linkable -%}<a target="_self" rel="bookmark" href="{{card_url}}" class="certificate-card">{%- else -%}<div class="certificate-card">{%- endif -%}
     <!-- Tipo do certificado -->
-    <div class="certificate-type">
-        <i class="fa-solid fa-graduation-cap"></i>
-        <span>Um texto aqui</span>
-    </div>
+    {%- if card_post.type -%}
+        <div class="certificate-type">
+            {% if card_post.type == "course" %}
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>
+                    {%- translate certificate.tags.course -%}
+                    {%- if card_post.certificate.workload %} • {{card_post.certificate.workload | extract_hours}}h{%- endif -%}
+                </span>
+            {% elsif card_post.type == "project" %}
+                <i class="fa-solid fa-rocket"></i>
+                <span>
+                    {%- translate certificate.tags.project -%}
+                    {%- if card_post.certificate.workload %} • {{card_post.certificate.workload | extract_hours}}h{%- endif -%}
+                </span>
+            {% elsif card_post.type == "webinar" %}
+                <i class="fa-solid fa-users-viewfinder"></i>
+                <span>
+                    {%- translate certificate.tags.webinar -%}
+                    {%- if card_post.certificate.workload %} • {{card_post.certificate.workload | extract_hours}}h{%- endif -%}
+                </span>
+            {% elsif card_post.type == "bootcamp" %}
+                <i class="fa-solid fa-users-gear"></i>
+                <span>
+                    {%- translate certificate.tags.bootcamp -%}
+                    {%- if card_post.certificate.workload %} • {{card_post.certificate.workload | extract_hours}}h{%- endif -%}
+                </span>
+            {% endif %}
+        </div>
+    {%- endif -%}
+
+    <!-- Imagem ilustrativa do certificado -->
     <img class="thumbnail" src="/assets/images/certificates/{{card_post.code}}/thumb.jpeg" alt="Certificates" oncontextmenu="return false;" />
+    
+    <!-- Conteúdos do certificado -->
     <div class="certificate-content">
-        <div class="certificate-competencies">
-            <img src="{{competence.logo}}" />
-        </div>
-        <div class="certificate-area">
-            <div class="certificate-authority">
-                <img src="{{authority.logo}}" />
-                <span>{{authority.name}}</span>
+        <!-- Competências do certificado -->
+        {%- if card_post.competencies -%}
+            <div class="certificate-competencies">
+                {%- for item in card_post.competencies -%}
+                    {%- if forloop.index <= 4 -%}
+                        {%- assign competence = site.data.competencies[item] -%}
+                        {%- if competence -%}
+                            <img src="{{competence.logo}}" />
+                        {%- endif -%}
+                    {%- endif -%}
+                {%- endfor -%}
             </div>
-            <p><strong>{{post.certificate.name}}</strong></p>
-            <span>{{post.date | localized_date: site.translations[site.lang].core.lang}}</span>
+        {%- endif -%}
+
+        <!-- Área para o conteúdo principal do certificado -->
+        <div class="certificate-area">
+            <!-- Empresa emissora do certificado -->
+            {%- assign authority = site.data.authority[card_post.authority] -%}
+            {%- if authority -%}
+                <div class="certificate-authority">
+                    <img src="{{authority.logo}}" />
+                    <span>{{authority.name}}</span>
+                </div>
+            {%- endif -%}
+
+            <!-- Nome do certificado -->
+            <p><strong>{{card_post.certificate.name}}</strong></p>
+            
+            <!-- Data de emissão do certificado -->
+            <span>{{card_post.date | localized_date: site.translations[site.lang].core.lang}}</span>
         </div>
     </div>
-</a>
+{%- if card_is_linkable -%}</a>{%- else -%}</div>{%- endif -%}
