@@ -8,3 +8,9 @@ google-gemini:
   logo: "/assets/images/logos/google-gemini.svg"
 visual-studio-code:
   logo: "/assets/images/logos/visual-studio-code.svg"
+git:
+  logo: "/assets/images/logos/git.svg"
+github:
+  logo: "/assets/images/logos/github.svg"
+git-bash:
+  logo: "/assets/images/logos/git-bash.svg"
