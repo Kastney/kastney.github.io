@@ -14,3 +14,5 @@ github:
   logo: "/assets/images/logos/github.svg"
 git-bash:
   logo: "/assets/images/logos/git-bash.svg"
+markdown:
+  logo: "/assets/images/logos/markdown.svg"
