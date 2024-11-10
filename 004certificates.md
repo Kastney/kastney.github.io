@@ -6,5 +6,5 @@ permalink: "/certificados/"
 permalink_us: "/certificates/"
 menu_enabled: false
 collection: certificates
-per_page: 10
+per_page: 12
 ---

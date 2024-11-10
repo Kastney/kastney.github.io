@@ -1,18 +1,22 @@
-html5:
-  logo: "/assets/images/logos/html5.svg"
 css3:
   logo: "/assets/images/logos/css3.svg"
-javascript:
-  logo: "/assets/images/logos/javascript.svg"
-google-gemini:
-  logo: "/assets/images/logos/google-gemini.svg"
-visual-studio-code:
-  logo: "/assets/images/logos/visual-studio-code.svg"
 git:
   logo: "/assets/images/logos/git.svg"
-github:
-  logo: "/assets/images/logos/github.svg"
 git-bash:
   logo: "/assets/images/logos/git-bash.svg"
+github:
+  logo: "/assets/images/logos/github.svg"
+google-chrome:
+  logo: "/assets/images/logos/google-chrome.svg"
+google-gemini:
+  logo: "/assets/images/logos/google-gemini.svg"
+html5:
+  logo: "/assets/images/logos/html5.svg"
+javascript:
+  logo: "/assets/images/logos/javascript.svg"
 markdown:
   logo: "/assets/images/logos/markdown.svg"
+visual-studio-code:
+  logo: "/assets/images/logos/visual-studio-code.svg"
+
+# live-server:

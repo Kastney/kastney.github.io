@@ -61,18 +61,19 @@
 
         <!-- Área para o conteúdo principal do certificado -->
         <div class="certificate-area">
-            <!-- Empresa emissora do certificado -->
-            {%- assign authority = site.data.authority[card_post.authority] -%}
-            {%- if authority -%}
-                <div class="certificate-authority">
-                    <img src="{{authority.logo}}" />
-                    <span>{{authority.name}}</span>
-                </div>
-            {%- endif -%}
+            <div>
+                <!-- Empresa emissora do certificado -->
+                {%- assign authority = site.data.authority[card_post.authority] -%}
+                {%- if authority -%}
+                    <div class="certificate-authority">
+                        <img src="{{authority.logo}}" />
+                        <span>{{authority.name}}</span>
+                    </div>
+                {%- endif -%}
 
-            <!-- Nome do certificado -->
-            <p><strong>{{card_post.certificate.name}}</strong></p>
-            
+                <!-- Nome do certificado -->
+                <p><strong>{{card_post.certificate.name}}</strong></p>
+            </div>
             <!-- Data de emissão do certificado -->
             <span>{{card_post.date | localized_date: site.translations[site.lang].core.lang}}</span>
         </div>

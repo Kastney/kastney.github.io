@@ -45,9 +45,9 @@
             column-gap: 4px;
 
             img {
-                background-color: rgba(255, 255, 255, 0.5);
+                background-color: rgba(255, 255, 255, 0.6);
                 backdrop-filter: $frosted-glass-effect;
-                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
+                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
                 border-radius: 6px;
                 padding: 5px;
                 height: 28px;
@@ -58,25 +58,29 @@
         .certificate-area {
             background-color: $card-light;
             backdrop-filter: $frosted-glass-effect;
-            padding: 5px 10px 5px 10px;
+            padding: 5px 10px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
             span {
                 font-size: 10px;
             }
 
-            img {
-                height: 13px;
-                width: 13px;
-            }
-
             p {
-                padding: 8px 0;
+                padding-top: 4px;
             }
 
             .certificate-authority {
                 display: flex;
                 align-items: center;
                 column-gap: 5px;
+            }
+
+            img {
+                height: 13px;
+                width: 13px;
             }
         }
     }

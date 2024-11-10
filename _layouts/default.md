@@ -19,7 +19,9 @@ layout: compress
       {%- include scripts/core.js -%}
       {%- include scripts/scroll-status.js -%}
       {%- include scripts/click-to-top.js -%}
-      {%- include scripts/click-to-more.js -%}
+      {%- if page.banner -%}
+        {%- include scripts/click-to-more.js -%}
+      {%- endif -%}
       {%- include scripts/contextmenu-disabled.js -%}
       {%- include scripts/dropdown.js -%}
     </script>
