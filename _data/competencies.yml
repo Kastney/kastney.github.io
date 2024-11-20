@@ -16,6 +16,8 @@ javascript:
   logo: "/assets/images/logos/javascript.svg"
 markdown:
   logo: "/assets/images/logos/markdown.svg"
+nodejs:
+  logo: "/assets/images/logos/nodejs.svg"
 visual-studio-code:
   logo: "/assets/images/logos/visual-studio-code.svg"
 
